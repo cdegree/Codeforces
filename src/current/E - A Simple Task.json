@@ -1,0 +1,36 @@
+{
+  "name" : "E - A Simple Task",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "10 5\nabacdabcda\n7 10 0\n5 8 1\n1 4 0\n3 6 0\n7 10 1",
+    "output" : "cbcaaaabdd",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "10 1\nagjucbvdfk\n1 10 1",
+    "output" : "abcdfgjkuv",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx512M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskE",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2018.11.11",
+  "contestName" : "Codeforces Round #312 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

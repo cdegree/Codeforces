@@ -1,0 +1,56 @@
+{
+  "name" : "A - BerOS file system",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "//usr///local//nginx/sbin",
+    "output" : "/usr/local/nginx/sbin",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "/////",
+    "output" : "/",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "/asjkl/sd/",
+    "output" : "/asjkl/sd",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "//////s///////s//////s//////",
+    "output" : "/s/s/s",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "////////s",
+    "output" : "/s",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "/a//aa/a// ",
+    "output" : "/a/aa/a",
+    "index" : 5,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx64M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskA",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2018.11.11",
+  "contestName" : "Codeforces Alpha Round #20 (Codeforces format)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

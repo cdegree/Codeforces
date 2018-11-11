@@ -29,22 +29,28 @@ public class InputReader {
     public String next() {
         byte[] buf = new byte[LINE_SIZE]; // line length
         int cnt = 0, c;
-        while ((c = read()) != -1) {
-            if (c == ' ')
+        c = read();
+        while (c == ' ' || c =='\n'|| c=='\r')
+            c = read();
+        do{
+            if (c == ' ' || c == '\n'|| c=='\r')
                 break;
             buf[cnt++] = (byte) c;
-        }
+        }while ((c = read()) != -1);
         return new String(buf, 0, cnt);
     }
 
     public String nextLine() {
         byte[] buf = new byte[LINE_SIZE]; // line length
         int cnt = 0, c;
-        while ((c = read()) != -1) {
-            if (c == '\n')
+        c = read();
+        while (c =='\n'|| c=='\r')
+            c = read();
+        do{
+            if (c == '\n'|| c=='\r')
                 break;
             buf[cnt++] = (byte) c;
-        }
+        }while ((c = read()) != -1);
         return new String(buf, 0, cnt);
     }
 
