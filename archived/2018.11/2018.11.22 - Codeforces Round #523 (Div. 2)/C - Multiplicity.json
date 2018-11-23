@@ -1,0 +1,42 @@
+{
+  "name" : "C - Multiplicity",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "2\n1 2\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "5\n2 2 1 22 14\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "18\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "8\n1 2 4 8 16 32 64 128",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2018.11.22",
+  "contestName" : "Codeforces Round #523 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

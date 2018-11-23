@@ -36,7 +36,6 @@ public class TaskE {
                 int pos = from;
                 for (int i = 0; i < m; ++i) {
                     if (tcnt[i] > 0) {
-
                         st[i].update(1, from, to, 0);
                         st[i].update(1, pos, pos + tcnt[i] - 1, 1);
                         pos = pos + tcnt[i];
