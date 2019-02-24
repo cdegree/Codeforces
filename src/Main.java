@@ -3,10 +3,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.DataInputStream;
-import java.util.Vector;
 import java.io.IOException;
 import java.util.InputMismatchException;
-import java.util.Collections;
 import java.io.InputStream;
 
 /**
@@ -21,53 +19,77 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        TaskC solver = new TaskC();
+        TaskF solver = new TaskF();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskC {
-        long res;
-        int mod = 1000000007;
-
+    static class TaskF {
         public void solve(int testNumber, InputReader in, PrintWriter out) {
-            int n = in.nextInt();
-            int[] a = in.readIntArray(0, n);
-            final int N = 1000006;
 
-            int[] cnt = new int[N];
-            res = 0;
-            cnt[0] = 1;
-            for (int i = 0; i < n; ++i) {
-                int m = a[i];
-                Vector<Integer> r = MathUtil.getDivisors(m);
-                Collections.sort(r);
-                Collections.reverse(r);
-                for (int k : r) {
-                    cnt[k] = (cnt[k] + cnt[k - 1]) % mod;
+            int n = in.nextInt();
+            DisjointSet ds = new DisjointSet(n);
+
+            Dq[] cells = new Dq[n + 1];
+            for (int i = 1; i <= n; ++i) {
+                cells[i] = new Dq(new Node(i));
+            }
+            int last = 1;
+            for (int i = 1; i < n; ++i) {
+                int a = in.nextInt();
+                int b = in.nextInt();
+                int xa = ds.find(a);
+                int xb = ds.find(b);
+                if (xa != xb) {
+                    ds.union(xa, xb);
+                    cells[xa].add(cells[xb]);
+                    last = xa;
                 }
             }
-            for (int i = 1; i <= n; ++i) {
-                res += cnt[i];
-            }
-            res %= mod;
-            out.println(res);
+            output(cells[last], out);
         }
 
-    }
-
-    static class MathUtil {
-        public static Vector<Integer> getDivisors(int n) {
-            Vector<Integer> r = new Vector<>();
-            for (int i = 1; i * i <= n; ++i) {
-                if (n % i == 0) {
-                    r.add(i);
-                    if (n / i != i) {
-                        r.add((n / i));
-                    }
+        void output(Dq dq, PrintWriter out) {
+            if (dq != null) {
+                Node root = dq.head;
+                while (root != null) {
+                    out.print(root.value + " ");
+                    root = root.next;
                 }
             }
-            return r;
+            out.println();
+        }
+
+        public class Node {
+            int value;
+            Node next;
+            Node pre;
+
+            Node(int value) {
+                this.value = value;
+                next = null;
+                pre = null;
+            }
+
+        }
+
+        public class Dq {
+            Node head;
+            Node tail;
+
+            public Dq(Node node) {
+                head = node;
+                tail = node;
+            }
+
+            public void add(Dq dq) {
+                if (dq != null) {
+                    tail.next = dq.head;
+                    dq.head.pre = tail;
+                    tail = dq.tail;
+                }
+            }
+
         }
 
     }
@@ -83,14 +105,6 @@ public class Main {
             this.in = new DataInputStream(inputStream);
             buffer = new byte[BUFFER_SIZE];
             bufferPointer = bytesRead = 0;
-        }
-
-        public int[] readIntArray(int start, int n) {
-            int ret[] = new int[start + n];
-            for (int i = start; i < n; ++i) {
-                ret[i] = this.nextInt();
-            }
-            return ret;
         }
 
         public int nextInt() {
@@ -124,6 +138,26 @@ public class Main {
             if (bufferPointer == bytesRead)
                 fillBuffer();
             return buffer[bufferPointer++];
+        }
+
+    }
+
+    static class DisjointSet {
+        int[] f;
+
+        public DisjointSet(int n) {
+            f = new int[n + 1];
+            for (int i = 1; i <= n; ++i) {
+                f[i] = i;
+            }
+        }
+
+        public int find(int x) {
+            return f[x] == x ? x : (f[x] = find(f[x]));
+        }
+
+        public void union(int x, int y) {
+            f[find(y)] = find(x);
         }
 
     }

@@ -1,0 +1,41 @@
+{
+  "name" : "A - Snowball",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "4 3\n1 1\n1 2\n",
+    "output" : "8",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "4 3\n9 2\n0 1\n",
+    "output" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "10 3\n100 2\n100 1\n",
+    "output" : "",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskA",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.01.06",
+  "contestName" : "Codeforces Round #530 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

@@ -1,0 +1,62 @@
+{
+  "name" : "C - Postcard",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "hw?ap*yn?eww*ye*ar\n12\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "ab?a\n2\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "ab?a\n3\n",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "ababb\n5\n",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "ab?a\n1\n",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "a*\n200",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "a?b?\n2",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "a?b?\n3",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "a?b?\n1",
+    "index" : 8,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.01.06",
+  "contestName" : "Codeforces Round #530 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

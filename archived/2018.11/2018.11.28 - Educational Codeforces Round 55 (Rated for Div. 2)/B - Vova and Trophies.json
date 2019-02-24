@@ -1,0 +1,41 @@
+{
+  "name" : "B - Vova and Trophies",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "10\nGGGSGGGSGG\n",
+    "output" : "7",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "4\nGGGG\n",
+    "output" : "4",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "3\nSSS\n",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2018.11.28",
+  "contestName" : "Educational Codeforces Round 55 (Rated for Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

@@ -1,9 +1,9 @@
 package algorithms;
 
 public class DisjointSet {
-    int f[];
+    int[] f;
 
-    DisjointSet(int n) {
+    public DisjointSet(int n) {
         f = new int[n + 1];
         for (int i = 1; i <= n; ++i) {
             f[i] = i;

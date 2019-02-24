@@ -1,0 +1,41 @@
+{
+  "name" : "E - Sonya and Matrix Beauty",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "1 3\naba",
+    "output" : "4",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2 3\naca\naac\n",
+    "output" : "11",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "3 5\naccac\naaaba\ncccaa\n",
+    "output" : "43",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskE",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2018.11.24",
+  "contestName" : "Codeforces Round #524 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}
