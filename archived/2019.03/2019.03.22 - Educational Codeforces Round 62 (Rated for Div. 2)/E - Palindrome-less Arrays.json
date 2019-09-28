@@ -1,0 +1,46 @@
+{
+  "name" : "E - Palindrome-less Arrays",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "2 3\n-1 -1\n",
+    "output" : "9",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "5 2\n1 -1 -1 1 2\n",
+    "output" : "0",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "5 3\n1 -1 -1 1 2\n",
+    "output" : "2",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "4 200000\n-1 -1 12345 -1\n",
+    "output" : "735945883\n",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskE",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.22",
+  "contestName" : "Educational Codeforces Round 62 (Rated for Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

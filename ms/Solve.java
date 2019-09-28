@@ -66,21 +66,31 @@ public class Solve {
             }
         }
     }
+    class  Node{
+        int x;
+        int y;
+    }
     public static void main(String[] args) {
-        LRUCache lru = new LRUCache(2);
-        lru.set(2, 1);
-        lru.pf();
-        lru.set(1, 1);
-        lru.pf();
-        lru.get(2);
-        lru.pf();
-        lru.set(4, 1);
-        lru.pf();
-        lru.get(1);
-        lru.get(2);
-        lru.pf();
-        lru.pf();
-        ArrayList<Integer> a = new ArrayList<>();
+        TreeSet<Node> set = new TreeSet<>(new Comparator<Node>() {
+            @Override
+            public int compare(Node o1, Node o2) {
+                return 0;
+            }
+        });
+        List<Integer> a = new ArrayList<>();
+        TreeMap<Integer,Integer> map = new TreeMap<>();
+        Map.Entry<Integer,Integer> it = map.ceilingEntry(12);
+        map.firstKey();
+        LinkedList<Integer> aa = new LinkedList<>();
+        List<List<Integer>> b = new LinkedList();
+        ((LinkedList<List<Integer>>) b).getLast().addAll(new LinkedList<>());
+        int n = 10;
+        for(int i=0;i<n;++i) {
+            String s = Integer.toBinaryString(i);
+            StringBuffer sb = new StringBuffer();
+            System.out.println(s);
+        }
+
 
         Collections.sort(a, new Comparator<Integer>() {
             @Override
@@ -88,6 +98,15 @@ public class Solve {
                 return 0;
             }
         });
-        LinkedHashMap<Integer,Integer> map = new LinkedHashMap<>();
+        LinkedHashMap<Integer,Integer> mp = new LinkedHashMap<>();
+    }
+    int solve(int n ){
+        int pos=0;
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        while(n>0){
+            list.add(n%10);
+            n/=10;
+        }
+        return 1;
     }
 }

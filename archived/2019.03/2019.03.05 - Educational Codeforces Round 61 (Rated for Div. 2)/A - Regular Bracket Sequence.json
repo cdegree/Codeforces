@@ -1,0 +1,41 @@
+{
+  "name" : "A - Regular Bracket Sequence",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3\n1\n4\n3\n",
+    "output" : "1",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "0\n0\n0\n0\n",
+    "output" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1\n2\n3\n4\n",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskA",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.05",
+  "contestName" : "Educational Codeforces Round 61 (Rated for Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

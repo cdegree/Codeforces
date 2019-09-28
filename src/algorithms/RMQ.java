@@ -1,6 +1,7 @@
 package algorithms;
 /*
-
+Range Max/Min Query
+return the index of the min value of a giving range.
 
  */
 public class RMQ {

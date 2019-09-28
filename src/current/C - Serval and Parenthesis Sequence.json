@@ -1,0 +1,126 @@
+{
+  "name" : "C - Serval and Parenthesis Sequence",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "6\n(?????",
+    "output" : "(()())",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "10\n(???(???(?\n",
+    "output" : ":(\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "6\n?(?(??",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "6\n?(?)??",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "6\n?((???",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "6\n???))?",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "6\n??????",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "8\n??????(?",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "1\n?",
+    "output" : ":(",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "2\n??",
+    "output" : "()",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "4\n)???",
+    "output" : ":(",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "10\n?((?(?(???",
+    "index" : 11,
+    "active" : true
+  }, {
+    "input" : "4\n()()",
+    "index" : 12,
+    "active" : true
+  }, {
+    "input" : "5\n(???)",
+    "output" : "",
+    "index" : 13,
+    "active" : true
+  }, {
+    "input" : "6\n((??))",
+    "index" : 14,
+    "active" : true
+  }, {
+    "input" : "8\n((((??))",
+    "output" : "(((())))",
+    "index" : 15,
+    "active" : true
+  }, {
+    "input" : "10\n((((??))))",
+    "output" : "((((()))))",
+    "index" : 16,
+    "active" : true
+  }, {
+    "input" : "12\n((((??))))))",
+    "output" : "(((((())))))",
+    "index" : 17,
+    "active" : true
+  }, {
+    "input" : "10\n((??(?))))",
+    "output" : "((((()))))",
+    "index" : 18,
+    "active" : true
+  }, {
+    "input" : "12\n((??(?))))))",
+    "output" : "(((((())))))",
+    "index" : 19,
+    "active" : true
+  }, {
+    "input" : "4\n((()",
+    "index" : 20,
+    "active" : true
+  }, {
+    "input" : "4\n()))",
+    "output" : "",
+    "index" : 21,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.04.13",
+  "contestName" : "Codeforces Round #551 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

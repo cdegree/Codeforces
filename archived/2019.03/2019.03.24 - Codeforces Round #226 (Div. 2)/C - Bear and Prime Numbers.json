@@ -1,0 +1,36 @@
+{
+  "name" : "C - Bear and Prime Numbers",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "6\n5 5 7 10 14 15\n3\n2 11\n3 12\n4 4\n",
+    "output" : "9\n7\n0\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "7\n2 3 5 7 11 4 8\n2\n8 10\n2 123\n",
+    "output" : "0\n7\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx512M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.24",
+  "contestName" : "Codeforces Round #226 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

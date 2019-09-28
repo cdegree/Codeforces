@@ -1,0 +1,41 @@
+{
+  "name" : "D - Little Girl and Maximum XOR",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "1 2",
+    "output" : "3",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "8 16",
+    "output" : "31",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1 1",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.23",
+  "contestName" : "Codeforces Round #169 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

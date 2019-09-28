@@ -1,0 +1,141 @@
+{
+  "name" : "F - Clear the String",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "5\nabaca\n",
+    "output" : "3",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "8\nabcddcba\n",
+    "output" : "4",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "9\nabcdedcba",
+    "output" : "5",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "7\nabababa",
+    "output" : "4",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "7\nabcccba",
+    "output" : "3",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "3\naaa",
+    "output" : "1",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "1\na",
+    "output" : "1",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "2\naa",
+    "output" : "1",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "2\nab",
+    "output" : "2",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "6\nacadda",
+    "output" : "3",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "7\nacaddac",
+    "output" : "4",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "5\nacadd",
+    "output" : "3",
+    "index" : 11,
+    "active" : true
+  }, {
+    "input" : "5\nddaca",
+    "output" : "3",
+    "index" : 12,
+    "active" : true
+  }, {
+    "input" : "10\nabbbbaccdd",
+    "output" : "4",
+    "index" : 13,
+    "active" : true
+  }, {
+    "input" : "4\naaaa",
+    "output" : "1",
+    "index" : 14,
+    "active" : true
+  }, {
+    "input" : "8\nccaabbaa",
+    "output" : "3",
+    "index" : 15,
+    "active" : true
+  }, {
+    "input" : "15\ncabaaccaabbaacc",
+    "output" : "5",
+    "index" : 16,
+    "active" : true
+  }, {
+    "input" : "8\naabbaacc",
+    "output" : "3",
+    "index" : 17,
+    "active" : true
+  }, {
+    "input" : "12\naabbaaccaabb",
+    "output" : "4",
+    "index" : 18,
+    "active" : true
+  }, {
+    "input" : "8\nabaaabcda",
+    "output" : "5",
+    "index" : 19,
+    "active" : true
+  }, {
+    "input" : "8\nabcabcab",
+    "output" : "6",
+    "index" : 20,
+    "active" : true
+  }, {
+    "input" : "4\nabac",
+    "output" : "3",
+    "index" : 21,
+    "active" : true
+  }, {
+    "input" : "6\nabaaca",
+    "output" : "3",
+    "index" : 22,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskF",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.05",
+  "contestName" : "Educational Codeforces Round 61 (Rated for Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

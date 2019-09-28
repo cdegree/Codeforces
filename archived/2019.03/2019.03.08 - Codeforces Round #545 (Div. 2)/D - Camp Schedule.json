@@ -1,0 +1,45 @@
+{
+  "name" : "D - Camp Schedule",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "101101\n110\n",
+    "output" : "110110",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "10010110\n100011\n",
+    "output" : "01100011\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "10\n11100\n",
+    "output" : "01",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "111000\n101",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx512M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.08",
+  "contestName" : "Codeforces Round #545 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

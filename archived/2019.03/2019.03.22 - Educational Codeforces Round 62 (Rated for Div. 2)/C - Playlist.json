@@ -1,0 +1,77 @@
+{
+  "name" : "C - Playlist",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "4 2\n3 7\n4 7\n5 7\n6 7\n",
+    "output" : "77",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "5 1\n12 31\n112 4\n100 100\n13 55\n55 50\n",
+    "output" : "10000\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "5 2\n1 10\n2 5\n3 4\n4 3\n5 2",
+    "output" : "21",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "3 1\n100 1\n1 100\n2 51",
+    "output" : "102",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "4 4\n100 100\n100 100\n100 100\n100 1",
+    "output" : "30000",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "2 2\n100 100\n50 2\n",
+    "output" : "",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "5 1\n1 10\n11 1\n5 1\n1 6\n3 3",
+    "output" : "",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "5 2\n100 100\n200 50\n200 50\n300 1",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "5 5\n10 10\n5 5\n4 6\n7 3\n2 8",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "10 5\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000\n1000000 1000000",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "5 3\n10 10\n10 10\n10 10\n10 10\n10 10",
+    "index" : 10,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.22",
+  "contestName" : "Educational Codeforces Round 62 (Rated for Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

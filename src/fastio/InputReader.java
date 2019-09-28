@@ -18,9 +18,25 @@ public class InputReader {
         bufferPointer = bytesRead = 0;
     }
 
+    public int[] readIntArray(int n) {
+        int ret[] = new int[n];
+        for (int i = 0; i < n; ++i) {
+            ret[i] = this.nextInt();
+        }
+        return ret;
+    }
+
     public int[] readIntArray(int start, int n) {
         int ret[] = new int[start + n];
-        for (int i = start; i < n; ++i) {
+        for (int i = start; i < start + n; ++i) {
+            ret[i] = this.nextInt();
+        }
+        return ret;
+    }
+
+    public int[] readLongArray(int n) {
+        int ret[] = new int[n];
+        for (int i = 0; i < n; ++i) {
             ret[i] = this.nextInt();
         }
         return ret;
@@ -30,13 +46,13 @@ public class InputReader {
         byte[] buf = new byte[LINE_SIZE]; // line length
         int cnt = 0, c;
         c = read();
-        while (c == ' ' || c =='\n'|| c=='\r')
+        while (c == ' ' || c == '\n' || c == '\r')
             c = read();
-        do{
-            if (c == ' ' || c == '\n'|| c=='\r')
+        do {
+            if (c == ' ' || c == '\n' || c == '\r')
                 break;
             buf[cnt++] = (byte) c;
-        }while ((c = read()) != -1);
+        } while ((c = read()) != -1);
         return new String(buf, 0, cnt);
     }
 
@@ -44,13 +60,13 @@ public class InputReader {
         byte[] buf = new byte[LINE_SIZE]; // line length
         int cnt = 0, c;
         c = read();
-        while (c =='\n'|| c=='\r')
+        while (c == '\n' || c == '\r')
             c = read();
-        do{
-            if (c == '\n'|| c=='\r')
+        do {
+            if (c == '\n' || c == '\r')
                 break;
             buf[cnt++] = (byte) c;
-        }while ((c = read()) != -1);
+        } while ((c = read()) != -1);
         return new String(buf, 0, cnt);
     }
 

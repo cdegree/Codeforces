@@ -1,0 +1,36 @@
+{
+  "name" : "A - Be Positive",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "5\n10 0 -7 2 6",
+    "output" : "1",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "7\n0 0 1 -1 0 0 2\n",
+    "output" : "0",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskA",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.02.24",
+  "contestName" : "Codeforces Round #542 [Alex Lopashev Thanks-Round] (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

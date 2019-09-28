@@ -1,0 +1,41 @@
+{
+  "name" : "C - Connect",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "5\n1 1\n5 5\n00001\n11111\n00111\n00110\n00110\n",
+    "output" : "10",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3\n1 3\n3 1\n010\n101\n010\n\n",
+    "output" : "8",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "3\n1 3\n3 1\n000\n101\n000\n",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.02.24",
+  "contestName" : "Codeforces Round #542 [Alex Lopashev Thanks-Round] (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

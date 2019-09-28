@@ -1,0 +1,41 @@
+{
+  "name" : "B - Nirvana",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "390\n",
+    "output" : "216\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "7",
+    "output" : "7",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1000000000\n",
+    "output" : "387420489\n",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.03.31",
+  "contestName" : "Codeforces Round #549 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}
