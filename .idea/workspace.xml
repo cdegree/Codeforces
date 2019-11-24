@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0912ca14-bb8a-4fdb-8132-01d92138df5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHelperReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHelperReport.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chelper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chelper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms/Solve.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms/Solve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/RMQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/RMQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fastio/InputReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fastio/InputReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/acl/Sol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/acl/Sol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/A - Serval and Bus.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/B - Serval and Toy Bricks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/C - Serval and Parenthesis Sequence.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/D - Serval and Rooted Tree.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/E - Serval and Snake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/F - Serval and Bonus Problem.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/TaskA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/TaskB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/TaskC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/TaskD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/TaskE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/current/TaskF.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,49 +79,51 @@
     <session id="708047607">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="51" />
+          <entry key="project.closed" value="55" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.10" value="11" />
-          <entry key="project.open.time.11" value="7" />
-          <entry key="project.open.time.12" value="21" />
+          <entry key="project.open.time.11" value="12" />
+          <entry key="project.open.time.12" value="24" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="7" />
+          <entry key="project.open.time.3" value="8" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="57" />
+          <entry key="project.opened" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="154" />
-          <entry key="json" value="5" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="190" />
+          <entry key="json" value="6" />
           <entry key="properties" value="2" />
-          <entry key="template" value="7" />
-          <entry key="txt" value="2" />
+          <entry key="template" value="11" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="154" />
-          <entry key="JSON" value="5" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="190" />
+          <entry key="JSON" value="6" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="Properties" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="4" />
-          <entry key="java" value="40156" />
+          <entry key="java" value="46533" />
           <entry key="properties" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="40156" />
+          <entry key="JAVA" value="46533" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="4" />
         </counts>
@@ -122,33 +132,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/RMQ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/acl/Sol.java">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskD1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-              <folding>
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/AC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+            <state relative-caret-position="-1118">
+              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -156,59 +144,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/SegmentTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+            <state relative-caret-position="998">
+              <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/KMP.java">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="331">
+              <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/Graph.java">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/BinaryIndexedTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="388">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+              <folding>
+                <element signature="e#1573#1574#0" expanded="true" />
+                <element signature="e#1607#1608#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chelper.properties">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskD2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="138">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fastio/InputReader.java">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="989">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/InputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/CHelperReport.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
+        <entry file="file://$PROJECT_DIR$/TestCaseClass.template">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TopCoderTaskClass.template">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TopCoderTestCaseClass.template">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -241,7 +239,6 @@
         <option value="$PROJECT_DIR$/Main.java" />
         <option value="$PROJECT_DIR$/ms/Main.java" />
         <option value="$PROJECT_DIR$/src/algorithms/DisjointSet.java" />
-        <option value="$PROJECT_DIR$/src/current/TaskD1.java" />
         <option value="$PROJECT_DIR$/archived/2019.02/2019.02.24 - Codeforces Round #542 [Alex Lopashev Thanks-Round] (Div. 2)/TaskD1.java" />
         <option value="$PROJECT_DIR$/src/current/TaskF.java" />
         <option value="$PROJECT_DIR$/chelper.properties" />
@@ -250,21 +247,25 @@
         <option value="$PROJECT_DIR$/ms/Solve.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/current/TaskE.java" />
-        <option value="$PROJECT_DIR$/src/current/TaskD.java" />
         <option value="$PROJECT_DIR$/src/fastio/InputReader.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/AC.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/RMQ.java" />
+        <option value="$PROJECT_DIR$/src/current/TaskD.java" />
+        <option value="$PROJECT_DIR$/src/acl/Sol.java" />
         <option value="$PROJECT_DIR$/src/current/TaskA.java" />
         <option value="$PROJECT_DIR$/src/current/TaskB.java" />
         <option value="$PROJECT_DIR$/src/current/TaskC.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/AC.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/RMQ.java" />
-        <option value="$PROJECT_DIR$/src/acl/Sol.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/BinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/BinaryIndexedTree.java" />
+        <option value="$PROJECT_DIR$/src/current/TaskD1.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="465" />
-    <option name="width" value="1440" />
-    <option name="height" value="1400" />
+    <option name="x" value="646" />
+    <option name="y" value="-19" />
+    <option name="width" value="1155" />
+    <option name="height" value="1120" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -274,6 +275,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,11 +287,6 @@
               <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
               <item name="Codeforces" type="462c0819:PsiDirectoryNode" />
               <item name="ms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codeforces" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
@@ -312,23 +309,28 @@
               <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
               <item name="Codeforces" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="current" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codeforces" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fastio" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569660395804" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574594868873" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../web" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20114942" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -349,13 +351,46 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Task.B - Serval and Toy Bricks">
-    <configuration name="SegmentTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.SegmentTree" />
+  <component name="RunManager" selected="Task.D1 - Optimal Subsequences (Easy Version)">
+    <configuration name="BinaryIndexedTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.BinaryIndexedTree" />
       <module name="Codeforces" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.BinarySearchTree" />
+      <module name="Codeforces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Codeforces" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sol" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="acl.Sol" />
+      <module name="Codeforces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="acl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -370,8 +405,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="A - Math Problem" type="Task" factoryName="Task">
+      <taskConf>src/current/A - Math Problem.json</taskConf>
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
     <configuration name="A - Serval and Bus" type="Task" factoryName="Task">
-      <taskConf>src/current/A - Serval and Bus.json</taskConf>
+      <taskConf />
       <method v="2">
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
@@ -387,13 +429,36 @@
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="B - Box" type="Task" factoryName="Task">
+      <taskConf>src/current/B - Box.json</taskConf>
+      <method v="2">
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
     <configuration name="B - Serval and Toy Bricks" type="Task" factoryName="Task">
-      <taskConf>src/current/B - Serval and Toy Bricks.json</taskConf>
+      <taskConf />
       <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
@@ -412,30 +477,24 @@
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
-    <configuration name="C - Serval and Parenthesis Sequence" type="Task" factoryName="Task">
-      <taskConf>src/current/C - Serval and Parenthesis Sequence.json</taskConf>
+    <configuration name="C - Messy" type="Task" factoryName="Task">
+      <taskConf>src/current/C - Messy.json</taskConf>
       <method v="2">
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
     <configuration name="D - Serval and Rooted Tree" type="Task" factoryName="Task">
-      <taskConf>src/current/D - Serval and Rooted Tree.json</taskConf>
+      <taskConf />
       <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
@@ -454,9 +513,38 @@
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
-    <configuration name="E - Serval and Snake" type="Task" factoryName="Task">
-      <taskConf>src/current/E - Serval and Snake.json</taskConf>
+    <configuration name="D1 - Optimal Subsequences (Easy Version)" type="Task" factoryName="Task">
+      <taskConf>src/current/D1 - Optimal Subsequences (Easy Version).json</taskConf>
       <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="D2 - Optimal Subsequences (Hard Version)" type="Task" factoryName="Task">
+      <taskConf>src/current/D2 - Optimal Subsequences (Hard Version).json</taskConf>
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="E - Arson In Berland Forest" type="Task" factoryName="Task">
+      <taskConf>src/current/E - Arson In Berland Forest.json</taskConf>
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="E - Serval and Snake" type="Task" factoryName="Task">
+      <taskConf />
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
@@ -476,8 +564,16 @@
       </method>
     </configuration>
     <configuration name="F - Serval and Bonus Problem" type="Task" factoryName="Task">
-      <taskConf>src/current/F - Serval and Bonus Problem.json</taskConf>
+      <taskConf />
       <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
@@ -496,20 +592,55 @@
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
+    <configuration name="F1 - Wrong Answer on test 233 (Easy Version)" type="Task" factoryName="Task">
+      <taskConf>src/current/F1 - Wrong Answer on test 233 (Easy Version).json</taskConf>
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="F2 - Wrong Answer on test 233 (Hard Version)" type="Task" factoryName="Task">
+      <taskConf>src/current/F2 - Wrong Answer on test 233 (Hard Version).json</taskConf>
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="G - Not Same" type="Task" factoryName="Task">
+      <taskConf>src/current/G - Not Same.json</taskConf>
+      <method v="2">
+        <option name="MakeProject" enabled="false" />
+        <option name="MakeProject" enabled="false" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Task.A - Serval and Bus" />
       <item itemvalue="Task.B - Serval and Toy Bricks" />
-      <item itemvalue="Task.C - Serval and Parenthesis Sequence" />
       <item itemvalue="Task.D - Serval and Rooted Tree" />
       <item itemvalue="Task.E - Serval and Snake" />
       <item itemvalue="Task.F - Serval and Bonus Problem" />
-      <item itemvalue="Application.SegmentTree" />
+      <item itemvalue="Task.A - Math Problem" />
+      <item itemvalue="Task.B - Box" />
+      <item itemvalue="Task.C - Messy" />
+      <item itemvalue="Task.D1 - Optimal Subsequences (Easy Version)" />
+      <item itemvalue="Task.D2 - Optimal Subsequences (Hard Version)" />
+      <item itemvalue="Task.E - Arson In Berland Forest" />
+      <item itemvalue="Task.F1 - Wrong Answer on test 233 (Easy Version)" />
+      <item itemvalue="Task.F2 - Wrong Answer on test 233 (Hard Version)" />
+      <item itemvalue="Task.G - Not Same" />
       <item itemvalue="Application.Solve" />
+      <item itemvalue="Application.Sol" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.BinarySearchTree" />
+      <item itemvalue="Application.BinaryIndexedTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinaryIndexedTree" />
+        <item itemvalue="Application.BinarySearchTree" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Sol" />
         <item itemvalue="Application.Solve" />
-        <item itemvalue="Application.SegmentTree" />
       </list>
     </recent_temporary>
   </component>
@@ -528,8 +659,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16467066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18263473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -538,7 +670,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.499501" visible="true" weight="0.35257733" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499501" visible="true" weight="0.3670103" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39793813" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -555,7 +687,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info active="true" anchor="right" x="0" y="0" width="465" height="926" id="Documentation" order="8" side_tool="true" visible="true" weight="0.32984033" />
+      <window_info anchor="right" x="0" y="0" width="465" height="926" id="Documentation" order="8" side_tool="true" visible="true" weight="0.32984033" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -567,34 +699,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/LinkedHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3206">
-          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2465">
-          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Iterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ListIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2120">
@@ -609,8 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskD1.java" />
-    <entry file="file://$PROJECT_DIR$/src/current/TaskD2.java" />
     <entry file="file://$PROJECT_DIR$/archived/2019.02/2019.02.24 - Codeforces Round #542 [Alex Lopashev Thanks-Round] (Div. 2)/TaskA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -624,9 +726,6 @@
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskF.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/archived/2019.02/2019.02.24 - Codeforces Round #542 [Alex Lopashev Thanks-Round] (Div. 2)/TaskC.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -644,12 +743,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/current/D - Camp Schedule.json" />
-    <entry file="file://$PROJECT_DIR$/TopCoderTestCaseClass.template">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TopCoderTaskClass.template">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/CheckerClass.template">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -684,64 +777,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestCaseClass.template">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskClass.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stl.java" />
-    <entry file="file://$PROJECT_DIR$/src/current/TaskE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/current/TaskH.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -752,9 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHelperReport.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/LCA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -762,17 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/MathUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/AC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ms/Solve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+        <state relative-caret-position="1196">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -790,59 +821,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chelper.properties">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/InputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="7498">
+          <caret line="349" selection-start-line="349" selection-end-line="349" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/AC.java">
+    <entry file="file://$PROJECT_DIR$/ms/Solve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        <state relative-caret-position="1288">
+          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/MathUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/RMQ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="437">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/SegmentTree.java">
+    <entry file="file://$PROJECT_DIR$/Codeforces.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskClass.template">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+        <state relative-caret-position="299">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/B - Filling the Grid.json" />
+    <entry file="file://$PROJECT_DIR$/chelper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskD.java" />
+    <entry file="file://$PROJECT_DIR$/src/current/TaskE.java" />
+    <entry file="file://$PROJECT_DIR$/src/current/TaskF.java" />
+    <entry file="file://$PROJECT_DIR$/src/acl/Sol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fastio/InputReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/InputStream.java">
+    <entry file="file://$PROJECT_DIR$/src/current/TaskA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+        <state relative-caret-position="598">
+          <caret line="29" column="9" selection-start-line="11" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/acl/Sol.java">
+    <entry file="file://$PROJECT_DIR$/src/current/TaskB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="897">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="989">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHelperReport.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestCaseClass.template">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TopCoderTaskClass.template">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TopCoderTestCaseClass.template">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="99" column="13" lean-forward="true" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskD2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/SegmentTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="998">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/BinaryIndexedTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/BinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskD1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1118">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -903,7 +1023,6 @@
             <option name="proportions">
               <list>
                 <option value="0.20114942" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

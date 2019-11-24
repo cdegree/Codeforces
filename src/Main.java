@@ -3,10 +3,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.DataInputStream;
-import java.util.AbstractCollection;
+import java.util.Arrays;
 import java.io.IOException;
 import java.util.InputMismatchException;
-import java.util.LinkedList;
+import java.util.Comparator;
 import java.io.InputStream;
 
 /**
@@ -21,111 +21,141 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        TaskC solver = new TaskC();
+        TaskD1 solver = new TaskD1();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskC {
+    static class TaskD1 {
         public void solve(int testNumber, InputReader in, PrintWriter out) {
             int n = in.nextInt();
-            char[] s = in.next().toCharArray();
-            n = s.length;
-            if (s.length == 1) {
-                out.println(":(");
-                return;
+            int[] a = in.readIntArray(1, n);
+            Item[] items = new Item[n + 1];
+            for (int i = 1; i <= n; ++i) {
+                Item item = new Item();
+                item.idx = i;
+                item.value = a[i];
+                items[i] = item;
             }
-            if (s[0] == ')' || s[n - 1] == '(' || n % 2 == 1) {
-                out.println(":(");
-                return;
-            }
-            s[0] = '(';
-            s[n - 1] = ')';
+            Arrays.sort(items, 1, n + 1, new Comparator<Item>() {
 
-            LinkedList<Integer> stack = new LinkedList<>();
-            LinkedList<Integer> left = new LinkedList<>();
-            int q = 0;
-            for (int i = 1; i < n - 1; ++i) {
-                if (s[i] == '(') {
-                    left.addLast(i);
-                } else if (s[i] == ')') {
-                    if (left.isEmpty()) {
-                        if (stack.isEmpty()) {
-                            out.println(":(");
-                            return;
-                        } else {
-                            s[stack.getLast()] = '(';
-                            stack.removeLast();
-                        }
+                public int compare(Item o1, Item o2) {
+                    if (o1.value != o2.value) {
+                        return Integer.compare(o2.value, o1.value);
                     } else {
-                        left.removeLast();
-//                    if (stack.isEmpty()) {
-//                        left.removeLast();
-//                    } else {
-//                        if (stack.getLast() > left.getLast()) {
-//                            s[stack.getLast()] = '(';
-//                            stack.removeLast();
-//                        } else {
-//                            left.removeLast();
-//                        }
-//                    }
+                        return Integer.compare(o1.idx, o2.idx);
                     }
+                }
+            });
+            int m = in.nextInt();
+            Quest[] quests = new Quest[m];
+
+            for (int i = 0; i < m; ++i) {
+                int k = in.nextInt();
+                int p = in.nextInt();
+                quests[i] = new Quest(k, p, i);
+            }
+            Arrays.sort(quests, new Comparator<Quest>() {
+
+                public int compare(Quest o1, Quest o2) {
+                    return Integer.compare(o1.k, o2.k);
+                }
+            });
+            BinaryIndexedTree bst = new BinaryIndexedTree(n + 1);
+            int idx = 1;
+            for (int i = 0; i < m; ++i) {
+                while (bst.count < quests[i].k) {
+                    bst.InsertElement(items[idx++].idx);
+                }
+                int kSmall = bst.FindKthSmallest(quests[i].p);
+                quests[i].result = a[kSmall];
+            }
+            Arrays.sort(quests, new Comparator<Quest>() {
+
+                public int compare(Quest o1, Quest o2) {
+                    return Integer.compare(o1.idx, o2.idx);
+                }
+            });
+            for (int i = 0; i < m; ++i) {
+                out.println(quests[i].result);
+            }
+        }
+
+        public class Item {
+            int idx;
+            int value;
+
+        }
+
+        public class Quest {
+            int k;
+            int p;
+            int idx;
+            int result;
+
+            public Quest(int k, int p, int idx) {
+                this.k = k;
+                this.p = p;
+                this.idx = idx;
+            }
+
+        }
+
+    }
+
+    static class BinaryIndexedTree {
+        int n;
+        int[] bit;
+        public int count;
+
+        public BinaryIndexedTree(int n) {
+            this.n = n;
+            bit = new int[n + 1];
+        }
+
+        public void Update(int i, int add) {
+            while (i > 0 && i < n) {
+                bit[i] += add;
+                i = i + (i & (-i));
+            }
+        }
+
+        public int Sum(int i) {
+            int ans = 0;
+            while (i > 0) {
+                ans += bit[i];
+                i = i - (i & (-i));
+            }
+
+            return ans;
+        }
+
+        public int FindKthSmallest(int k) {
+            // Do binary search in BIT[] for given
+            // value k.
+            int l = 0;
+            int h = n;
+            while (l < h) {
+                int mid = (l + h) / 2;
+                if (k <= Sum(mid)) {
+                    h = mid;
                 } else {
-                    if (left.isEmpty()) {
-                        left.addLast(i);
-                        s[i] = '(';
-                    } else {
-                        stack.addLast(i);
-                    }
+                    l = mid + 1;
                 }
             }
-//        out.println(s);
-            if (left.isEmpty() && stack.isEmpty()) {
-                out.println(s);
-            } else {
-                while (!stack.isEmpty()) {
-                    if (!left.isEmpty()) {
-                        int id = stack.getFirst();
-                        stack.removeFirst();
-                        int left_id = left.getFirst();
-                        left.removeFirst();
-                        if (left_id < id) {
-                            s[id] = ')';
-                        } else {
-                            out.println(":(");
-                            return;
-                        }
-                    } else {
-                        break;
-                    }
-                }
-                if (!left.isEmpty()) {
-                    out.println(":(");
-                    return;
-                }
-//            out.println(stack.size());
-                if (stack.size() % 2 == 1) {
-                    out.println(":(");
-                    return;
-                }
-                while (!stack.isEmpty()) {
-                    int id = stack.getFirst();
-//                out.println(id);
-                    stack.removeFirst();
-                    s[id] = '(';
-                    id = stack.getFirst();
-                    stack.removeFirst();
-                    s[id] = ')';
-                }
-                out.println(s);
-            }
+
+            return l;
+        }
+
+        public void InsertElement(int x) {
+            Update(x, 1);
+            ++count;
         }
 
     }
 
     static class InputReader {
         final private int BUFFER_SIZE = 1 << 10;
-        final private int LINE_SIZE = 1 << 20;
         private DataInputStream in;
         private byte[] buffer;
         private int bufferPointer;
@@ -137,18 +167,12 @@ public class Main {
             bufferPointer = bytesRead = 0;
         }
 
-        public String next() {
-            byte[] buf = new byte[LINE_SIZE]; // line length
-            int cnt = 0, c;
-            c = read();
-            while (c == ' ' || c == '\n' || c == '\r')
-                c = read();
-            do {
-                if (c == ' ' || c == '\n' || c == '\r')
-                    break;
-                buf[cnt++] = (byte) c;
-            } while ((c = read()) != -1);
-            return new String(buf, 0, cnt);
+        public int[] readIntArray(int start, int n) {
+            int ret[] = new int[start + n];
+            for (int i = start; i < start + n; ++i) {
+                ret[i] = this.nextInt();
+            }
+            return ret;
         }
 
         public int nextInt() {

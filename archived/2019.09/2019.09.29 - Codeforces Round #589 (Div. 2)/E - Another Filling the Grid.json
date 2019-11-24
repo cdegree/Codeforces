@@ -1,5 +1,5 @@
 {
-  "name" : "E - Serval and Snake",
+  "name" : "E - Another Filling the Grid",
   "testType" : "SINGLE",
   "input" : {
     "type" : "STANDARD"
@@ -15,8 +15,8 @@
   "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
   "checkerParameters" : "",
   "testClasses" : [ ],
-  "date" : "2019.04.13",
-  "contestName" : "Codeforces Round #551 (Div. 2)",
+  "date" : "2019.09.29",
+  "contestName" : "Codeforces Round #589 (Div. 2)",
   "truncate" : true,
   "inputClass" : "fastio.InputReader",
   "outputClass" : "java.io.PrintWriter",

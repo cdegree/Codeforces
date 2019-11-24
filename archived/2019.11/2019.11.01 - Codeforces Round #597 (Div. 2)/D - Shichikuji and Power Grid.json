@@ -1,0 +1,35 @@
+{
+  "name" : "D - Shichikuji and Power Grid",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3\n2 3\n1 1\n3 2\n3 2 3\n3 2 3\n",
+    "output" : "8\n3\n1 2 3 \n0\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3\n2 1\n1 2\n3 3\n1000000000 1000000000 1000000000\n10000000 10000000 10000000\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.11.01",
+  "contestName" : "Codeforces Round #597 (Div. 2)",
+  "truncate" : false,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

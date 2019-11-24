@@ -1,62 +1,50 @@
 package current;
 
 import fastio.InputReader;
-
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.util.InputMismatchException;
 
 
+
 public class TaskB {
-    public void solve(int testNumber, InputReader in, PrintWriter out) {
-        int n = in.nextInt();
-        int m = in.nextInt();
-        int H = in.nextInt();
-        int[] a = in.readIntArray(m);
-        int[] b = in.readIntArray(n);
-        int[][] h = new int[n][m];
-        for (int i = 0; i < n; ++i) {
-            h[i] = in.readIntArray(m);
-        }
-
-        for (int i = 0; i < n; ++i) {
-            int index = -1;
-            if (b[i] == 0) {
-                continue;
-            }
-            for (int j = 0; j < m; ++j) {
-                if (h[i][j] > 0 && b[i] <= a[j]) {
-                    index = j;
+    public void solve(int testNumber, InputReader in, PrintWriter out){
+        int T = in.nextInt();
+        while(T-->0){
+            int n = in.nextInt();
+            int[] a = in.readIntArray(1,n);
+            int[] b = new int[n+1];
+            boolean[] occupied = new boolean[n+1];
+            int base = 1;
+            int pre = 0;
+            boolean OK =true;
+            for(int i=1;i<=n;++i){
+                if(a[i]!=pre){
+                    pre=a[i];
+                    b[i] = a[i];
+                    occupied[b[i]] = true;
+                }
+                else{
+                    while(occupied[base]){
+                        ++base;
+                    }
+                    if(base>n||base>a[i]){
+                        OK=false;
+                        break;
+                    }
+                    b[i] = base;
+                    occupied[base] = true;
                 }
             }
-            if (index == -1) {
-                out.println("not found for col " + i);
-                return;
-            }
-            h[i][index] = b[i];
-        }
-
-        for (int j = 0; j < m; ++j) {
-            int index = -1;
-            if (a[j] == 0) {
-                continue;
-            }
-            for (int i = 0; i < n; ++i) {
-                if (h[i][j] > 0 && a[j] <= b[i]) {
-                    index = i;
+            if(OK){
+                for(int i=1;i<=n;++i){
+                    out.print(b[i]+" ");
                 }
+                out.println();
             }
-            if (index == -1) {
-                out.println("not found for row " + j);
-                return;
+            else{
+                out.println(-1);
             }
-            h[index][j] = a[j];
-        }
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < m; ++j) {
-                out.print(h[i][j] + " ");
-            }
-            out.println();
         }
     }
 }

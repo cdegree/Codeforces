@@ -4,11 +4,30 @@ import java.util.*;
 
 public class Sol {
 
-    public static void main(String[] args){
+    static int a = 2;
 
+    static {
+        System.out.println("Sol static block called");
     }
 
-    void linkedList(){
+    {
+        System.out.println("Sol block called");
+    }
+
+    public Sol() {
+        B b = new B();
+    }
+
+    public static void main(String[] args) {
+        // The comment below is magic..
+        // \u000d System.out.println("Geek Comment Executed!");
+        Sol sol = new Sol();
+        String s = "09-03-2002";
+        boolean ok = s.matches("\\d+\\D\\d+\\D\\d+");
+        System.out.println(ok);
+    }
+
+    void linkedList() {
         LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.add(1);
         linkedList.addLast(2);
@@ -22,7 +41,7 @@ public class Sol {
 
     }
 
-    void treeSet(){
+    void treeSet() {
         TreeSet<Integer> set = new TreeSet<>();
         set.first();
         set.last();
@@ -33,11 +52,11 @@ public class Sol {
         set.isEmpty();
     }
 
-    void treeMap(){
+    void treeMap() {
         TreeMap<Integer, Integer> map = new TreeMap<>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o1-o2;
+                return o1 - o2;
             }
         });
         map.keySet();
@@ -55,8 +74,38 @@ public class Sol {
 
     }
 
-    void dataStructure(){
+    void dataStructure() {
 
 
+    }
+
+    static class S {
+        static {
+            System.out.println("S static block called");
+        }
+
+        {
+            System.out.println("S block called");
+        }
+    }
+
+    class A {
+        {
+            System.out.println("A block called");
+        }
+
+        public A() {
+            System.out.println("A Constructed");
+        }
+    }
+
+    class B extends A {
+        {
+            System.out.println("B block called");
+        }
+
+        public B() {
+            System.out.println("B Constructed");
+        }
     }
 }

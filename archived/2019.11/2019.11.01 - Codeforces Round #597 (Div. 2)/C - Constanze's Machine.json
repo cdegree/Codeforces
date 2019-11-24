@@ -1,0 +1,51 @@
+{
+  "name" : "C - Constanze's Machine",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "ouuokarinn\n",
+    "output" : "4",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "banana\n",
+    "output" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "nnn\n",
+    "output" : "3",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "amanda\n",
+    "output" : "0",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "uuuuasdflknn",
+    "output" : "10",
+    "index" : 4,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.11.01",
+  "contestName" : "Codeforces Round #597 (Div. 2)",
+  "truncate" : false,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

@@ -5,101 +5,54 @@ import fastio.InputReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.util.InputMismatchException;
-import java.util.LinkedList;
 
 
 public class TaskC {
     public void solve(int testNumber, InputReader in, PrintWriter out) {
-        int n = in.nextInt();
-        char[] s = in.next().toCharArray();
-        n = s.length;
-        if (s.length == 1) {
-            out.println(":(");
-            return;
-        }
-        if (s[0] == ')' || s[n - 1] == '(' || n % 2 == 1) {
-            out.println(":(");
-            return;
-        }
-        s[0] = '(';
-        s[n - 1] = ')';
-
-        LinkedList<Integer> stack = new LinkedList<>();
-        LinkedList<Integer> left = new LinkedList<>();
-        int q = 0;
-        for (int i = 1; i < n - 1; ++i) {
-            if (s[i] == '(') {
-                left.addLast(i);
-            } else if (s[i] == ')') {
-                if (left.isEmpty()) {
-                    if (stack.isEmpty()) {
-                        out.println(":(");
-                        return;
-                    } else {
-                        s[stack.getLast()] = '(';
-                        stack.removeLast();
+        int T = in.nextInt();
+        while (T-- > 0) {
+            int n = in.nextInt();
+            int k = in.nextInt();
+            char[] s = in.next().toCharArray();
+            char[] target = new char[n];
+            for (int i = 0; i < (k - 1) * 2; i += 2) {
+                target[i] = '(';
+                target[i + 1] = ')';
+            }
+            for (int i = 2 * k - 2, j = n - 1; i < j; ++i, --j) {
+                target[i] = '(';
+                target[j] = ')';
+            }
+            int len = 0;
+            int[] a = new int[n];
+            int[] b = new int[n];
+            for (int i = 0; i < n; ++i) {
+                if (s[i] != target[i]) {
+                    int idx = i;
+                    for (int j = i + 1; j < n; ++j) {
+                        if (s[j] == target[i]) {
+                            idx = j;
+                            break;
+                        }
                     }
-                } else {
-                    left.removeLast();
-//                    if (stack.isEmpty()) {
-//                        left.removeLast();
-//                    } else {
-//                        if (stack.getLast() > left.getLast()) {
-//                            s[stack.getLast()] = '(';
-//                            stack.removeLast();
-//                        } else {
-//                            left.removeLast();
-//                        }
-//                    }
-                }
-            } else {
-                if (left.isEmpty()) {
-                    left.addLast(i);
-                    s[i] = '(';
-                } else {
-                    stack.addLast(i);
-                }
-            }
-        }
-//        out.println(s);
-        if (left.isEmpty() && stack.isEmpty()) {
-            out.println(s);
-        } else {
-            while (!stack.isEmpty()) {
-                if (!left.isEmpty()) {
-                    int id = stack.getFirst();
-                    stack.removeFirst();
-                    int left_id = left.getFirst();
-                    left.removeFirst();
-                    if (left_id < id) {
-                        s[id] = ')';
-                    } else {
-                        out.println(":(");
-                        return;
+                    a[len] = i + 1;
+                    b[len] = idx + 1;
+                    len++;
+                    int ti = i;
+                    int tj = idx;
+                    for (int p = 0; p < (idx - i + 1) / 2; ++p) {
+                        char t = s[ti];
+                        s[ti] = s[tj];
+                        s[tj] = t;
+                        ++ti;
+                        --tj;
                     }
-                } else {
-                    break;
                 }
             }
-            if (!left.isEmpty()) {
-                out.println(":(");
-                return;
+            out.println(len);
+            for (int i = 0; i < len; ++i) {
+                out.println(a[i] + " " + b[i]);
             }
-//            out.println(stack.size());
-            if (stack.size() % 2 == 1) {
-                out.println(":(");
-                return;
-            }
-            while (!stack.isEmpty()) {
-                int id = stack.getFirst();
-//                out.println(id);
-                stack.removeFirst();
-                s[id] = '(';
-                id = stack.getFirst();
-                stack.removeFirst();
-                s[id] = ')';
-            }
-            out.println(s);
         }
     }
 }
