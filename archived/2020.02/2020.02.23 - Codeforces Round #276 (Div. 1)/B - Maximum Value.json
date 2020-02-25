@@ -1,0 +1,36 @@
+{
+  "name" : "B - Maximum Value",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3\n3 4 5\n",
+    "output" : "2",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "20\n1000000 3 2 4 5 1000000 3 2 4 5 1000000 3 2 4 5 1000000 3 2 4 5",
+    "output" : "",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.23",
+  "contestName" : "Codeforces Round #276 (Div. 1)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

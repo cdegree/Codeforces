@@ -1,0 +1,36 @@
+{
+  "name" : "D - Good Substrings",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "ababab\n01000000000000000000000000\n1\n",
+    "output" : "5",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "acbacbacaa\n00000000000000000000000000\n2\n",
+    "output" : "8",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx512M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.21",
+  "contestName" : "Codeforces Round #166 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

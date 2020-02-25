@@ -1,0 +1,46 @@
+{
+  "name" : "D2 - Remove the Substring (hard version)",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "bbaba\nbb\n",
+    "output" : "3",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "baaba\nab\n",
+    "output" : "2",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "abcde\nabcde\n",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "asdfasdf\nfasd\n",
+    "output" : "3",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD2",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.24",
+  "contestName" : "Codeforces Round #579 (Div. 3)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

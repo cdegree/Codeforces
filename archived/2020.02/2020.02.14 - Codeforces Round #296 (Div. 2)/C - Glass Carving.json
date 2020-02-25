@@ -1,0 +1,36 @@
+{
+  "name" : "C - Glass Carving",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "4 3 4\nH 2\nV 2\nV 3\nV 1\n",
+    "output" : "8\n4\n4\n2\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "7 6 5\nH 4\nV 3\nV 5\nH 2\nV 1\n",
+    "output" : "28\n16\n12\n6\n4\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.14",
+  "contestName" : "Codeforces Round #296 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

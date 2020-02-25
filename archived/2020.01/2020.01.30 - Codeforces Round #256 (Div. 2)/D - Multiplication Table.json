@@ -1,0 +1,46 @@
+{
+  "name" : "D - Multiplication Table",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "2 2 2\n",
+    "output" : "2",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2 3 4\n",
+    "output" : "3\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1 10 5\n",
+    "output" : "5\n",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "10 1 7",
+    "output" : "7",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.01.30",
+  "contestName" : "Codeforces Round #256 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

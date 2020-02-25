@@ -16,10 +16,7 @@ public class TaskD1 {
         int[] a = in.readIntArray(1, n);
         Item[] items = new Item[n + 1];
         for (int i = 1; i <= n; ++i) {
-            Item item = new Item();
-            item.idx = i;
-            item.value = a[i];
-            items[i] = item;
+            items[i] = new Item(i, a[i]);
         }
         Arrays.sort(items, 1, n + 1, new Comparator<Item>() {
             @Override
@@ -68,6 +65,11 @@ public class TaskD1 {
     public class Item {
         int idx;
         int value;
+
+        public Item(int idx, int value) {
+            this.idx = idx;
+            this.value = value;
+        }
     }
 
     public class Quest {

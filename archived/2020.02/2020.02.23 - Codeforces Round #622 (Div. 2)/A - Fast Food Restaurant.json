@@ -1,0 +1,31 @@
+{
+  "name" : "A - Fast Food Restaurant",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "7\n1 2 1\n0 0 0\n9 1 7\n2 2 3\n2 3 2\n3 2 2\n4 4 4\n",
+    "output" : "3\n0\n4\n5\n5\n5\n7\n",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskA",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.23",
+  "contestName" : "Codeforces Round #622 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

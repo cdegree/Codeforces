@@ -11,6 +11,9 @@
 .mtj.tmp/
 out/
 ms/
+src/acl/
+src/current/
+lib/
 
 # Package Files #
 *.jar

@@ -1,0 +1,31 @@
+{
+  "name" : "B - Fridge Lockers",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3\n4 4\n1 1 1 1\n3 1\n1 2 3\n3 3\n1 2 3\n",
+    "output" : "8\n1 2\n4 3\n3 2\n4 1\n-1\n12\n3 2\n1 2\n3 1",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2019.11.25",
+  "contestName" : "Codeforces Round #601 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

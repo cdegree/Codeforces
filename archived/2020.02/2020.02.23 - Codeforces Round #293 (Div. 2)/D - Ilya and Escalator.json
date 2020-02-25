@@ -1,0 +1,41 @@
+{
+  "name" : "D - Ilya and Escalator",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "1 0.50 1\n",
+    "output" : "0.5\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1 0.50 4\n",
+    "output" : "0.9375\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "4 0.20 2\n",
+    "output" : "0.4\n",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.23",
+  "contestName" : "Codeforces Round #293 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

@@ -1,19 +1,36 @@
 package algorithms;
 
 public class BinaryIndexedTree {
-    int n;
-    int[] bit;
     public int count;
+    int n;
+    long[] bit;
 
     public BinaryIndexedTree(int n) {
         this.n = n;
-        bit = new int[n + 1];
+        bit = new long[n + 1];
     }
 
+    public static void main(String[] args) {
+
+        BinaryIndexedTree bit = new BinaryIndexedTree(20000);
+
+        bit.insertElement(20);
+        bit.insertElement(50);
+        bit.insertElement(30);
+        bit.insertElement(40);
+
+        System.out.println("2nd Smallest element is " + bit.findKthSmallest(2));
+
+        System.out.println("Rank of 40 is " + bit.findRank(40));
+
+        bit.deleteElement(40);
+        System.out.println("Rank of 50 is " + bit.findRank(50));
+
+    }
 
     /* Updates element at index 'i' of BIT. */
-    public void Update(int i, int add) {
-        while (i > 0 && i < n) {
+    public void update(int i, int add) {
+        while (i > 0 && i <= n) {
             bit[i] += add;
             i = i + (i & (-i));
         }
@@ -22,25 +39,28 @@ public class BinaryIndexedTree {
     /* Returns cumulative sum of all elements of
        fenwick tree/BIT from start upto and
        including element at index 'i'. */
-    public int Sum(int i) {
-        int ans = 0;
+    public long sum(int i) {
+        long ans = 0;
         while (i > 0) {
             ans += bit[i];
             i = i - (i & (-i));
         }
-
         return ans;
     }
 
+    public long queryRange(int i, int j) {
+        return sum(j) - sum(i - 1);
+    }
+
     // Returns lower bound for k in BIT.
-    public int FindKthSmallest(int k) {
+    public int findKthSmallest(int k) {
         // Do binary search in BIT[] for given
         // value k.
         int l = 0;
         int h = n;
         while (l < h) {
             int mid = (l + h) / 2;
-            if (k <= Sum(mid)) {
+            if (k <= sum(mid)) {
                 h = mid;
             } else {
                 l = mid + 1;
@@ -51,40 +71,23 @@ public class BinaryIndexedTree {
     }
 
     // Insert x into BIT. We masically increment
-// rank of all elements greater than x.
-    public void InsertElement(int x) {
-        Update(x, 1);
+    // rank of all elements greater than x.
+    public void insertElement(int x) {
+        update(x, 1);
         ++count;
     }
 
     // Delete x from BIT. We masically decreases
-// rank of all elements greater than x.
-    public void DeleteElement(int x) {
-        Update(x, -1);
+    // rank of all elements greater than x.
+    public void deleteElement(int x) {
+        update(x, -1);
         --count;
     }
 
     // Returns rank of element. We basically
-// return sum of elements from start to
-// index x.
-    int FindRank(int x) {
-        return Sum(x);
-    }
-    public static void main(String[] args){
-
-        BinaryIndexedTree bit = new BinaryIndexedTree(20000);
-
-        bit.InsertElement(20);
-        bit.InsertElement(50);
-        bit.InsertElement(30);
-        bit.InsertElement(40);
-
-        System.out.println("2nd Smallest element is "+ bit.FindKthSmallest(2));
-
-        System.out.println("Rank of 40 is  "+ bit.FindRank(40));
-
-        bit.DeleteElement(40);
-        System.out.println("Rank of 50 is "+ bit.FindRank(50));
-
+    // return sum of elements from start to
+    // index x.
+    public long findRank(int x) {
+        return sum(x);
     }
 }

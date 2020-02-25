@@ -1,0 +1,41 @@
+{
+  "name" : "D - Pashmak and Parmida's problem",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "7\n1 2 1 1 2 2 1\n",
+    "output" : "8",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3\n1 1 1\n",
+    "output" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "5\n1 2 3 4 5\n",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.21",
+  "contestName" : "Codeforces Round #261 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}
