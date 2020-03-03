@@ -12,61 +12,69 @@ public class SegmentTree {
         root.left = 1;
         root.right = n;
     }
- 
+
+    public static void change(int[][] a) {
+
+        int[] b = {1, 2, 3, 4};
+        a[0] = b;
+
+        int[][] c = {{2, 2, 2, 2}, {2, 2, 2, 2}};
+        a = c;
+    }
+
     public static void main(String[] args) {
 
-//        int n = 10;
-//        SegmentTree st = new SegmentTree(n);
-//
-//        int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//
-//        st.build(1, a);
-//
-//        int from = 1;
-//        int to = 3;
-//        int ans = st.query(1, from, to);
-//        System.out.println(String.format("[%d,%d] = %d", from, to, ans));
-//
-//        from = 8;
-//        to = 10;
-//        ans = st.query(1, from, to);
-//        System.out.println(String.format("[%d,%d] = %d", from, to, ans));
-//
-//        from = 4;
-//        to = 7;
-//        ans = st.query(1, from, to);
-//        System.out.println(String.format("[%d,%d] = %d", from, to, ans));
-//
-//        st.update(1, 10, 10, 1);
-//        from = 8;
-//        to = 10;
-//        ans = st.query(1, from, to);
-//        System.out.println(String.format("[%d,%d] = %d", from, to, ans));
+        int[][] c = {{3, 3, 3, 3}, {3, 3, 3, 3}};
+        change(c);
+        for (int i = 0; i < c.length; ++i) {
+            for (int j = 0; j < c[i].length; ++j) {
+                System.out.println(c[i][j]);
+            }
+        }
 
+
+        int[] a = {0, -4, -2, -11};
+        int n = a.length - 1;
+
+        SegmentTree st = new SegmentTree(n);
+
+        st.build(a);
+
+        int from = 1;
+        int to = 3;
+        int ans = st.query(from, to);
+        System.out.println(String.format("[%d,%d] = %d", from, to, ans));// -4,-2,-11
+
+        st.update(2, 3, 4);
+        from = 1;
+        to = 3;
+        ans = st.query(from, to);
+        System.out.println(String.format("[%d,%d] = %d", from, to, ans));//-4,2,-9
+
+        st.update(1, 3, 6);
+        from = 1;
+        to = 3;
+        ans = st.query(from, to);
+        System.out.println(String.format("[%d,%d] = %d", from, to, ans));//2,8,-3
+
+        st.update(3, 3, 6);
+        from = 1;
+        to = 3;
+        ans = st.query(from, to);
+        System.out.println(String.format("[%d,%d] = %d", from, to, ans));//2,8,3
     }
 
-    void pull_up(Node cur, Node left, Node right) {
-        int pair = Math.min(left.rightBracket, right.leftBracket);
-        cur.val = left.val + right.val + pair * 2;
-        cur.leftBracket = left.leftBracket + right.leftBracket - pair;
-        cur.rightBracket = right.rightBracket + left.rightBracket - pair;
-    }
 
-    public void build(char[] a) {
+    public void build(int[] a) {
         build(root, a);
     }
 
-    public void build(Node cur, char[] a) {
+    public void build(Node cur, int[] a) {
 
 //        System.out.println(String.format("node[%d] [%d,%d]", cur, left[cur], right[cur]));
         if (cur.left == cur.right) {
             //System.out.println(" L:"+cur.left);
-            if (a[cur.left - 1] == ')') {
-                cur.leftBracket = 1;
-            } else {
-                cur.rightBracket = 1;
-            }
-            cur.val = 0;
+            cur.val = a[cur.left];
 //            System.out.println(String.format("node[%d] [%d,%d] sum =%d", cur, left[cur], right[cur], sum[cur]));
         } else {
             Node lc = new Node();
@@ -82,47 +90,52 @@ public class SegmentTree {
             build(rc, a);
             pull_up(cur, lc, rc);
         }
-        cur.lazy_value = -1;
+        cur.lazy_value = 0;
     }
 
-    void push_down(int cur) {
-//        if (lazy_value[cur] != -1) {
-//            int lc = cur * 2;
-//            int rc = cur * 2 + 1;
-//            lazy_value[lc] = lazy_value[rc] = lazy_value[cur];
-//            sum[lc] = (right[lc] - left[lc] + 1) * lazy_value[cur];
-//            sum[rc] = (right[rc] - left[rc] + 1) * lazy_value[cur];
-////            pf("left", lc);
-////            pf("right", rc);
-//            lazy_value[cur] = -1;
-//        }
+    void pull_up(Node cur, Node left, Node right) {
+        //int pair = Math.min(left.rightBracket, right.leftBracket);
+        cur.val = Math.max(left.val, right.val);
+        //cur.leftBracket = left.leftBracket + right.leftBracket - pair;
+        //cur.rightBracket = right.rightBracket + left.rightBracket - pair;
+    }
+
+    void push_down(Node cur) {
+        if (cur.lazy_value > 0) {
+            cur.lcld.lazy_value += cur.lazy_value;
+            cur.lcld.val += cur.lazy_value;
+            cur.rcld.lazy_value += cur.lazy_value;
+            cur.rcld.val += cur.lazy_value;
+            cur.lazy_value = 0;
+        }
     }
 
     void pf(String label, Node cur) {
         System.out.println(String.format("%s:node[%d] [%d,%d] sum ", label, cur, cur.left, cur.right));
     }
 
-//    public void update(int cur, int from, int to, int value) {
-////        System.out.println(String.format("before node[%d] [%d,%d] sum =%d", cur, left[cur], right[cur], sum[cur]));
-//        if (from <= left[cur] && right[cur] <= to) {
-//            sum[cur] = (right[cur] - left[cur] + 1) * value;
-//            lazy_value[cur] = value;
-//        } else {
-//            push_down(cur);
-//            int lc = cur * 2;
-//            int rc = cur * 2 + 1;
-//            if (to <= right[lc]) {
-//                update(lc, from, to, value);
-//            } else if (from >= left[rc]) {
-//                update(rc, from, to, value);
-//            } else {
-//                update(lc, from, to, value);
-//                update(rc, from, to, value);
-//            }
-//            pull_up(cur);
-////            System.out.println(String.format("after node[%d] [%d,%d] sum =%d", cur, left[cur], right[cur], sum[cur]));
-//        }
-//    }
+    public void update(int from, int to, int value) {
+        //System.out.println(String.format("%d->%d += %d", from, to, value));
+        update(root, from, to, value);
+    }
+
+    public void update(Node cur, int from, int to, int value) {
+        //System.out.println(String.format("before node [%d,%d] max =%d  add %d", cur.left, cur.right, cur.val, value));
+        if (from <= cur.left && cur.right <= to) {
+            cur.lazy_value += value;
+            cur.val += value;
+        } else {
+            push_down(cur);
+            if (from <= cur.lcld.right) {
+                update(cur.lcld, from, to, value);
+            }
+            if (cur.rcld.left <= to) {
+                update(cur.rcld, from, to, value);
+            }
+            pull_up(cur, cur.lcld, cur.rcld);
+            //System.out.println(String.format("after node [%d,%d] max =%d  add %d", cur.left, cur.right, cur.val, value));
+        }
+    }
 
     public int query(int from, int to) {
         Node qNode = query(root, from, to);
@@ -136,7 +149,7 @@ public class SegmentTree {
         } else {
             Node lc = cur.lcld;
             Node rc = cur.rcld;
-            //push_down(cur);
+            push_down(cur);
             if (to <= lc.right) {
                 return query(lc, from, to);
             } else if (from >= rc.left) {

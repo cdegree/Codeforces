@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Arrays;
+
 public class BinaryIndexedTree {
     public int count;
     int n;
@@ -26,6 +28,10 @@ public class BinaryIndexedTree {
         bit.deleteElement(40);
         System.out.println("Rank of 50 is " + bit.findRank(50));
 
+    }
+
+    public void reset() {
+        Arrays.fill(bit, 0);
     }
 
     /* Updates element at index 'i' of BIT. */

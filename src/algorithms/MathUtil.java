@@ -5,6 +5,9 @@ import java.util.TreeMap;
 import java.util.Vector;
 
 public class MathUtil {
+    public static int INF = 1 << 31;
+    public static long LINF = 1L << 61;
+
 
     public static Vector<Integer> getDivisors(int n) {
         Vector<Integer> r = new Vector<>();
@@ -16,9 +19,16 @@ public class MathUtil {
                 }
             }
         }
+
         return r;
     }
 
+    /**
+     * Time complexity sqrt(n)
+     *
+     * @param n
+     * @return all unique divisors of n
+     */
     public static Vector<Long> getDivisors(long n) {
         Vector<Long> r = new Vector<>();
         for (Long i = 1L; i * i <= n; ++i) {
@@ -29,7 +39,6 @@ public class MathUtil {
                 }
             }
         }
-
         return r;
     }
 

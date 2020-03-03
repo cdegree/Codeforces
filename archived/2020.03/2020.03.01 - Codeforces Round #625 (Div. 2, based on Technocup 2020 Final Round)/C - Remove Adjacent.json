@@ -1,0 +1,46 @@
+{
+  "name" : "C - Remove Adjacent",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "8\nbacabcab\n",
+    "output" : "4\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "4\nbcda\n",
+    "output" : "3\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "6\nabbbbb\n",
+    "output" : "5\n",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "1\na",
+    "output" : "",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.03.01",
+  "contestName" : "Codeforces Round #625 (Div. 2, based on Technocup 2020 Final Round)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

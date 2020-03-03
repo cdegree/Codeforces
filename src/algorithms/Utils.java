@@ -6,7 +6,9 @@ import java.util.TreeMap;
 public class Utils {
 
 
-    public static long[] shrink(long[] a) {
-        return null;
+    public static String YESNO(boolean OK) {
+        return OK?"YES":"NO";
     }
+
+
 }

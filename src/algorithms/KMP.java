@@ -16,7 +16,16 @@ public class KMP {
         }
         return p;
     }
-    static public void main(String[] args){
 
+    static public void main(String[] args) {
+        char[] s = "abababcdabcabcd".toCharArray();
+        int[] p = getP(s);
+        for (int i = 0; i < s.length; ++i) {
+            System.out.print(s[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < p.length; ++i) {
+            System.out.print(p[i] + " ");
+        }
     }
 }

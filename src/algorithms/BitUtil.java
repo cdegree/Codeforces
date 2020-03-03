@@ -1,7 +1,7 @@
 package algorithms;
 
 public class BitUtil {
-    public int countBit(int mask, int n) {
+    public static int countBit(long mask, int n) {
         int cnt = 0;
         for (int i = 0; i < n; ++i) {
             if (testBit(mask, i)) {
@@ -11,11 +11,11 @@ public class BitUtil {
         return cnt;
     }
 
-    public int mergeBit(int mask, int pos) {
-        return mask | (1 << pos);
+    public static long mergeBit(long mask, int pos) {
+        return mask | (1L << pos);
     }
 
-    public boolean testBit(int mask, int pos) {
-        return (mask & (1 << pos)) != 0;
+    public static boolean testBit(long mask, int pos) {
+        return (mask & (1L << pos)) != 0;
     }
 }

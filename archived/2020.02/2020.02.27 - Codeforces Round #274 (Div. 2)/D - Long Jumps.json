@@ -1,0 +1,41 @@
+{
+  "name" : "D - Long Jumps",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "3 250 185 230\n0 185 250\n",
+    "output" : "1\n230\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "4 250 185 230\n0 20 185 250\n",
+    "output" : "0\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "2 300 185 230\n0 300\n",
+    "output" : "2\n185 230\n",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.02.27",
+  "contestName" : "Codeforces Round #274 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}
