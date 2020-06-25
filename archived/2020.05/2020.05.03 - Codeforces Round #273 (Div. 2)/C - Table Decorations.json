@@ -1,0 +1,51 @@
+{
+  "name" : "C - Table Decorations",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "5 4 3\n",
+    "output" : "4",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1 1 1\n",
+    "output" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "2 3 3\n",
+    "output" : "2",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "1 5 0",
+    "output" : "1",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "1 1 4",
+    "output" : "2",
+    "index" : 4,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.05.03",
+  "contestName" : "Codeforces Round #273 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

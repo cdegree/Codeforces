@@ -1,0 +1,31 @@
+{
+  "name" : "D - Task On The Board",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "4\nabac\n3\n2 1 0\nabc\n1\n0\nabba\n3\n1 0 1\necoosdcefr\n10\n38 13 24 14 11 5 3 24 17 0\n",
+    "output" : "aac\nb\naba\ncodeforces\n",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.06.16",
+  "contestName" : "Codeforces Round #650 (Div. 3)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

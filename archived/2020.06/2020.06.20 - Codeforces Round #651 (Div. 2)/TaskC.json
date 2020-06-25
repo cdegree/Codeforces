@@ -1,0 +1,49 @@
+{
+  "name" : "TaskC",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "7\n1\n2\n3\n4\n5\n6\n12\n",
+    "output" : "FastestFinger\nAshishgup\nAshishgup\nFastestFinger\nAshishgup\nFastestFinger\nAshishgup\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "10\n1000000000\n99999998\n88888882\n77777772\n55555552\n50000000\n66666666\n44444444\n22222222\n98965746",
+    "output" : "",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "5\n8\n10\n14\n16\n20",
+    "output" : "",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "3\n24\n30\n36",
+    "output" : "",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskC",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.06.20",
+  "contestName" : "Codeforces Round #651 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

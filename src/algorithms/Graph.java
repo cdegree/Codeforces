@@ -8,7 +8,6 @@ public class Graph {
     public int[] order;
     public int[][] fa;
     public LinkedList<Edge>[] adj;
-    Edge[] edges;
     int m;
     int n;
 
@@ -20,6 +19,13 @@ public class Graph {
         this.n = n;
         adj = new LinkedList[n + 1];
         for (int i = 0; i <= n; ++i) {
+//            adj[i] = new TreeSet<>((o1, o2) -> {
+//                if (o1.value != o2.value) {
+//                    return o1.value - o2.value;
+//                } else {
+//                    return o1.type - o2.type;
+//                }
+//            });
             adj[i] = new LinkedList<>();
         }
     }
@@ -40,25 +46,40 @@ public class Graph {
         adj[v].add(e);
     }
 
+    public void addEdge(int u, int v) {
+
+        adj[u].add(new Edge(v, 1));
+        adj[v].add(new Edge(u, 1));
+        //System.out.println("add edge "+u+" "+v);
+    }
+
     public void addEdge(int u, int v, int value) {
         adj[u].add(new Edge(v, value));
         adj[v].add(new Edge(u, value));
         //System.out.println("add edge "+u+" "+v);
     }
 
-    public int[] getMinDistanceTo(int v) {
-        PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x.distance));
+    public void addEdge(int u, int v, int value, int type) {
+        adj[u].add(new Edge(u, v, value, type));
+        adj[v].add(new Edge(v, u, value, type));
+        //System.out.println("add edge "+u+" "+v);
+    }
+
+    public long[] getMinDistanceTo(int v) {
+        PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingLong(x -> x.distance));
         Node p = new Node(v, 0);
         boolean[] vis = new boolean[n + 1];
-        int[] distance = new int[n + 1];
+        long[] distance = new long[n + 1];
         vis[v] = true;
         pq.add(p);
         while (!pq.isEmpty()) {
             Node cur = pq.poll();
             distance[cur.u] = cur.distance;
+            //System.out.println(cur.u + " --  " + cur.distance);
             for (Edge e : adj[cur.u]) {
-                if (!vis[e.v] && !e.enable) {
+                if (!vis[e.v]) {
                     vis[e.v] = true;
+                    e.used = true;
                     pq.add(new Node(e.v, cur.distance + e.value));
                 }
             }
@@ -67,7 +88,7 @@ public class Graph {
     }
 
     public long getMinDistanceBetween(int u, int v) {
-        PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x.distance));
+        PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingLong(x -> x.distance));
         Node p = new Node(u, 0);
         boolean[] vis = new boolean[n + 1];
         pq.add(p);
@@ -121,12 +142,14 @@ public class Graph {
         return fa[u][0];
     }
 
-    public Edge[] getEdges() {
-        return edges;
-    }
-
-    public void setEdges(Edge[] edges) {
-        this.edges = edges;
+    public Vector<Edge> getEdges() {
+        Vector<Edge> ret = new Vector<>();
+        for (int i = 1; i <= n; ++i) {
+            if (!adj[i].isEmpty()) {
+                ret.addAll(adj[i]);
+            }
+        }
+        return ret;
     }
 
     public int getM() {
@@ -145,19 +168,20 @@ public class Graph {
         this.n = n;
     }
 
-    public LinkedList<Edge>[] getAdj() {
-        return adj;
-    }
-
-    public void setAdj(LinkedList<Edge>[] adj) {
-        this.adj = adj;
-    }
-
     public class Edge {
         public int u;
         public int v;
         public int value;
         public boolean enable = true;
+        public int type;
+        public boolean used = false;
+
+        public Edge(int u, int v, int value, int type) {
+            this.u = u;
+            this.v = v;
+            this.value = value;
+            this.type = type;
+        }
 
         public Edge(int u, int v, int value) {
             this.u = u;
@@ -173,9 +197,9 @@ public class Graph {
 
     class Node {
         int u;
-        int distance;
+        long distance;
 
-        public Node(int u, int distance) {
+        public Node(int u, long distance) {
             this.u = u;
             this.distance = distance;
         }

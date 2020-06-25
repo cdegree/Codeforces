@@ -1,0 +1,31 @@
+{
+  "name" : "E - Necklace Assembly",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "6\n6 3\nabcbac\n3 6\naaa\n7 1000\nabczgyo\n5 4\nababa\n20 10\naaebdbabdbbddaadaadc\n20 5\necbedececacbcbccbdec\n\n",
+    "output" : "6\n3\n5\n4\n15\n10\n",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskE",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.06.16",
+  "contestName" : "Codeforces Round #650 (Div. 3)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

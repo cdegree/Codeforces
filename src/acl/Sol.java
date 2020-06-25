@@ -25,6 +25,16 @@ public class Sol {
         String s = "09-03-2002";
         boolean ok = s.matches("\\d+\\D\\d+\\D\\d+");
         System.out.println(ok);
+
+
+        TreeMap<Integer, Integer> set = new TreeMap<>();
+        set.put(1,1);
+        set.put(1,1);
+        set.put(1,1);
+        List<List<String>> ret = Arrays.asList(new ArrayList[set.size()]);
+        if(ret.get(0) == null) {
+            ret.set(0, new ArrayList<>());
+        }
     }
 
     void linkedList() {

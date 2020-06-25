@@ -1,13 +1,38 @@
 package algorithms;
 
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.Vector;
+import java.util.*;
 
 public class MathUtil {
     public static int INF = 1 << 31;
     public static long LINF = 1L << 61;
 
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; ++i) {
+            //System.out.print(getEulerTotientFunction(i) + " ");
+            if (i % 10 == 0) {
+                //System.out.println();
+            }
+        }
+        int n = 20;
+
+        while (n != 0) {
+            //System.out.println(n%-2);
+            n /= -2;
+        }
+        int e = 1;
+        for (int i = 0; i < 10; ++i) {
+            //System.out.println(e);
+            e *= -2;
+        }
+        Vector<Integer> res = new Vector<>();
+        TreeSet<Integer> set = new TreeSet<>();
+
+        TreeSet<Integer> nset = set;
+
+        nset.add(23);
+        System.out.println(set.size());
+
+    }
 
     public static Vector<Integer> getDivisors(int n) {
         Vector<Integer> r = new Vector<>();
@@ -22,6 +47,7 @@ public class MathUtil {
 
         return r;
     }
+
 
     /**
      * Time complexity sqrt(n)
@@ -42,8 +68,27 @@ public class MathUtil {
         return r;
     }
 
-    public static Map<Long, Integer> getPrimeDivisors(long n) {
-        Map<Long, Integer> r = new TreeMap<>();
+    public static TreeMap<Integer, Integer> getPrimeDivisors(int n) {
+        TreeMap<Integer, Integer> r = new TreeMap<>();
+        for (int i = 2; (long)i * i <= n; ++i) {
+            if (n % i == 0) {
+                r.put(i, 0);
+                int cnt = 0;
+                while (n % i == 0) {
+                    ++cnt;
+                    n /= i;
+                }
+                r.put(i, cnt);
+            }
+        }
+        if (n > 1) {
+            r.put(n, 1);
+        }
+        return r;
+    }
+
+    public static TreeMap<Long, Integer> getPrimeDivisors(long n) {
+        TreeMap<Long, Integer> r = new TreeMap<>();
         for (long i = 2; i * i <= n; ++i) {
             if (n % i == 0) {
                 r.put(i, 0);
@@ -59,6 +104,19 @@ public class MathUtil {
             r.put(n, 1);
         }
         return r;
+    }
+
+    public static int getGCD(int a, int b) {
+        if (a < b) {
+            int t = a;
+            a = b;
+            b = t;
+        }
+        if (b == 0) {
+            return a;
+        } else {
+            return getGCD(b, a % b);
+        }
     }
 
     public static long getGCD(long a, long b) {
@@ -108,11 +166,129 @@ public class MathUtil {
         return ret;
     }
 
-    public static void main(String[] args) {
-        for (int i = 1; i <= 100; ++i) {
-            System.out.print(getEulerTotientFunction(i) + " ");
-            if (i % 10 == 0) {
-                System.out.println();
+
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+
+        List<List<Integer>> ret = new LinkedList<>();
+
+        TreeSet<List<Integer>> set = new TreeSet<>(new Comparator<List<Integer>>() {
+            public int compare(List<Integer> o1, List<Integer> o2) {
+                for (int i = 0; i < o1.size(); ++i) {
+                    if (o1.get(i) != o2.get(i)) {
+                        return o1.get(i) - o2.get(i);
+                    }
+                }
+                return 0;
+            }
+        });
+
+        solve(candidates, 0, target, new LinkedList<>(), set);
+
+        System.out.println(set.size());
+        for (List<Integer> list : set) {
+            for (int a : list) {
+                System.out.println(a);
+            }
+            ret.add(list);
+        }
+
+        return ret;
+    }
+
+    void solve(int[] candidates, int sum, int target, LinkedList<Integer> cur, TreeSet<List<Integer>> set) {
+
+        //System.out.println(sum+" "+target+" "+cur.size());
+
+        if (sum == target && !cur.isEmpty()) {
+
+            System.out.print(" cur :");
+            for (int a : cur) {
+                System.out.print(a + " ");
+            }
+            System.out.println();
+            set.add(new ArrayList<>(cur));
+            System.out.println(set.size());
+            char c = '3';
+            Character d = 'a';
+
+            return;
+        }
+
+        for (int i = 0; i < candidates.length; ++i) {
+            if (sum + candidates[i] <= target) {
+                cur.add(candidates[i]);
+                solve(candidates, sum + candidates[i], target, cur, set);
+                cur.removeLast();
+            }
+        }
+    }
+
+
+    public class RealNumber {
+
+        int numerator;
+        int denominator;
+
+        public RealNumber(int numerator, int denominator) {
+            this.numerator = numerator;
+            this.denominator = denominator;
+            reduce();
+        }
+
+        public RealNumber(int x) {
+            this.numerator = x;
+            this.denominator = 1;
+        }
+
+        public void reduce() {
+            int gcd = getGCD(this.numerator, this.denominator);
+            if (gcd != 0) {
+                this.numerator /= gcd;
+                this.denominator /= gcd;
+            }
+        }
+
+        public RealNumber substract(RealNumber y) {
+            int numerator = this.numerator * y.denominator - y.numerator * this.denominator;
+            int denominator = this.denominator * y.denominator;
+            return new RealNumber(numerator, denominator);
+        }
+
+        public RealNumber plus(RealNumber y) {
+            int numerator = this.numerator * y.denominator + y.numerator * this.denominator;
+            int denominator = this.denominator * y.denominator;
+            return new RealNumber(numerator, denominator);
+        }
+
+        public RealNumber divide(RealNumber y) {
+            int numerator = this.numerator * y.denominator;
+            int denominator = this.denominator * y.numerator;
+
+            return new RealNumber(numerator, denominator);
+        }
+
+        public RealNumber multiply(RealNumber y) {
+            int numerator = this.numerator * y.numerator;
+            int denominator = this.denominator * y.denominator;
+            return new RealNumber(numerator, denominator);
+        }
+
+        public boolean equals(RealNumber y) {
+            reduce();
+            y.reduce();
+            return numerator == y.numerator && denominator == y.denominator;
+        }
+
+        int getGCD(int a, int b) {
+            if (a < b) {
+                int t = a;
+                a = b;
+                b = t;
+            }
+            if (b == 0) {
+                return a;
+            } else {
+                return getGCD(b, a % b);
             }
         }
     }

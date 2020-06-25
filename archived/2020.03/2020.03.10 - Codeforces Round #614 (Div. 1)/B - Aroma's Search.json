@@ -1,0 +1,41 @@
+{
+  "name" : "B - Aroma's Search",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD"
+  },
+  "output" : {
+    "type" : "STANDARD"
+  },
+  "tests" : [ {
+    "input" : "1 1 2 3 1 0\n2 4 20\n",
+    "output" : "3",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1 1 2 3 1 0\n15 27 26\n",
+    "output" : "2",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1 1 2 3 1 0\n2 2 1\n",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.03.10",
+  "contestName" : "Codeforces Round #614 (Div. 1)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false
+}

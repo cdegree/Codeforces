@@ -51,6 +51,43 @@ public class Trie {
         add(ch, 0);
     }
 
+
+    public int getBest(Node cur, int depth) {
+        int cnt = 0;
+        int id = -1;
+        for (int i = 0; i < 2; ++i) {
+            if (cur.next[i] != null) {
+                id = i;
+                ++cnt;
+            }
+        }
+        if (cnt == 0) {
+            return 0;
+        } else if (cnt == 1) {
+            return getBest(cur.next[id], depth - 1);
+        } else {
+            int left = getBest(cur.next[0], depth - 1);
+            int right = getBest(cur.next[1], depth - 1);
+            return (1 << depth) | Math.min(left, right);
+        }
+    }
+
+    public int getMin() {
+        return getBest(root, 29);
+    }
+
+    public void add(int x) {
+        Node cur = root;
+        for (int i = 29; i >= 0; --i) {
+            int id = BitUtil.testBit(x, i) ? 1 : 0;
+            if (cur.next[id] == null) {
+                cur.next[id] = new Node();
+            }
+            cur = cur.next[id];
+        }
+    }
+
+
     public void add(char[] ch, int st) {
         Node cur = root;
         int cnt = 0;
@@ -67,6 +104,7 @@ public class Trie {
     class Node {
         Node[] next = new Node[3];
         boolean marked = false;
+        int best = 0;
 
         public Node() {
             Arrays.fill(next, null);

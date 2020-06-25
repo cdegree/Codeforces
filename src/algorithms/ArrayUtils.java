@@ -1,10 +1,47 @@
 package algorithms;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.TreeMap;
+import java.util.*;
 
 public class ArrayUtils {
+
+    public static void reverse(char[] a, int start, int end) {
+        char temp;
+        int from = start;
+        int to = end - 1;
+        while (from < to) {
+            temp = a[from];
+            a[from] = a[to];
+            a[to] = temp;
+            ++from;
+            --to;
+        }
+    }
+
+    public static long sum(long[] a) {
+        long ret = 0;
+        for (int i = 0; i < a.length; ++i) {
+            ret += a[i];
+        }
+        return ret;
+    }
+
+
+    public static long sum(int[] a) {
+        long ret = 0;
+        for (int i = 0; i < a.length; ++i) {
+            ret += a[i];
+        }
+        return ret;
+    }
+
+
+    public static long sum(Vector<Integer> a) {
+        long ret = 0;
+        for (int i = 0; i < a.size(); ++i) {
+            ret += a.get(i);
+        }
+        return ret;
+    }
 
     public static void reverse(int[] a) {
         int temp;
@@ -84,18 +121,31 @@ public class ArrayUtils {
     }
 
     public static void main(String[] args) {
-        int[] a = {9923, -2, -2, 5, -8, 23, -493, 6, -2, 78, 10000};
-        int[] b = {8, 3, 3, 4, 2, 6, 1, 5, 3, 7, 9};
-        a = shrink(a);
-        for (int i = 0; i < a.length; ++i) {
-            System.out.println(a[i] + " " + b[i]);
-        }
+        LinkedList<Integer> l = new LinkedList<>();
+        LinkedList<Integer> r = new LinkedList<>();
+        l.add(1);
+        l.add(2);
+        l.add(3);
+        r.addAll(l);
 
-        long[] c = {5, 32, 2, 3, 1903, 4, 23, 4, 56, 3, 65, 367, 8, 5, 45, 45363, 656, 23};
-        mergeSort(c);
-        for (long v : c) {
-            System.out.println(v);
-        }
+        l.removeLast();
+        l.removeLast();
+        System.out.println(l);
+        System.out.println(r);
+
+
+//        int[] a = {9923, -2, -2, 5, -8, 23, -493, 6, -2, 78, 10000};
+//        int[] b = {8, 3, 3, 4, 2, 6, 1, 5, 3, 7, 9};
+//        a = shrink(a);
+//        for (int i = 0; i < a.length; ++i) {
+//            System.out.println(a[i] + " " + b[i]);
+//        }
+//
+//        long[] c = {5, 32, 2, 3, 1903, 4, 23, 4, 56, 3, 65, 367, 8, 5, 45, 45363, 656, 23};
+//        mergeSort(c);
+//        for (long v : c) {
+//            System.out.println(v);
+//        }
     }
 
     public static int minElement(int[] a, int start, int end) {

@@ -20,84 +20,54 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        TaskB solver = new TaskB();
+        TaskE solver = new TaskE();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskB {
+    static class TaskE {
         public void solve(int testNumber, InputReader in, PrintWriter out) {
             int n = in.nextInt();
-            long[][] a = new long[n][n];
+            char[] s = in.nextLine().toCharArray();
+            char[] t = in.nextLine().toCharArray();
+            int[] mark = new int[n];
             for (int i = 0; i < n; ++i) {
-                a[i] = in.nextLongArray(n);
-            }
-            if (n == 1) {
-                out.println(1);
-                return;
-            }
-            long sum = 0;
-            for (int i = 0; i < n; ++i) {
-                boolean OK = true;
-                for (int j = 0; j < n; ++j) {
-                    if (a[i][j] == 0) {
-                        OK = false;
-                        break;
-                    }
-                }
-                if (OK) {
-                    for (int j = 0; j < n; ++j) {
-                        sum += a[i][j];
-                    }
-                    break;
+                if (s[i] != t[i]) {
+                    mark[i] = (s[i] == '0') ? 1 : 2;
                 }
             }
-            long target = sum;
-            long res = -1;
+            int cnt1 = 0;
+            int cnt2 = 0;
             for (int i = 0; i < n; ++i) {
-                boolean OK = true;
-                int idx = -1;
-                for (int j = 0; j < n; ++j) {
-                    if (a[i][j] == 0) {
-                        OK = false;
-                        idx = j;
-                        break;
-                    }
-                }
-                if (!OK) {
-                    for (int j = 0; j < n; ++j) {
-                        if (j != idx) {
-                            sum -= a[i][j];
+                if (mark[i] == 1) ++cnt1;
+                if (mark[i] == 2) ++cnt2;
+            }
+            if (cnt1 != cnt2) {
+                out.println(-1);
+            } else {
+                int n1 = 0;
+                int n2 = 0;
+                int res = 0;
+                for (int i = 0; i < n; ++i) {
+                    if (mark[i] == 1) {
+                        if (n2 > 0) {
+                            --n2;
+                            ++n1;
+                        } else {
+                            ++n1;
+                        }
+                    } else if (mark[i] == 2) {
+                        if (n1 > 0) {
+                            --n1;
+                            ++n2;
+                        } else {
+                            ++n2;
                         }
                     }
-                    res = a[i][idx] = sum;
+                    res = Math.max(res, n1 + n2);
                 }
+                out.println(res);
             }
-            boolean OK = true;
-            for (int i = 0; i < n; ++i) {
-                sum = 0;
-                for (int j = 0; j < n; ++j) sum += a[i][j];
-                if (sum != target) OK = false;
-            }
-            for (int j = 0; j < n; ++j) {
-                sum = 0;
-                for (int i = 0; i < n; ++i) sum += a[i][j];
-                if (sum != target) OK = false;
-            }
-            sum = 0;
-            for (int i = 0; i < n; ++i) {
-                sum += a[i][i];
-            }
-            if (sum != target) OK = false;
-            sum = 0;
-            for (int i = 0; i < n; ++i) {
-                sum += a[i][n - i - 1];
-            }
-
-            if (sum != target) OK = false;
-            if (res <= 0) OK = false;
-            out.println(OK ? res : -1);
-
         }
 
     }
@@ -122,19 +92,18 @@ public class Main {
             return tokenizer.nextToken();
         }
 
+        public String nextLine() {
+            String ret = "";
+            try {
+                ret = reader.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return ret;
+        }
+
         public int nextInt() {
             return Integer.parseInt(next());
-        }
-
-        public long nextLong() {
-            return Long.parseLong(next());
-        }
-
-        public long[] nextLongArray(int n) {
-            long[] a = new long[n];
-            for (int i = 0; i < n; i++)
-                a[i] = nextLong();
-            return a;
         }
 
     }
