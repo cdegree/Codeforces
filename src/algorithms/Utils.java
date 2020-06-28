@@ -8,15 +8,7 @@ public class Utils {
         return OK ? "YES" : "NO";
     }
 
-    public class Pair implements Comparable<Pair> {
-        int x;
-        int y;
-        @Override
-        public int compareTo(Pair o) {
-            if (o.x == x) return y - o.y;
-            return x - o.x;
-        }
-    }
+
 
 
 }

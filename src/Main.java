@@ -27,46 +27,74 @@ public class Main {
 
     static class TaskE {
         public void solve(int testNumber, InputReader in, PrintWriter out) {
-            int n = in.nextInt();
-            char[] s = in.nextLine().toCharArray();
-            char[] t = in.nextLine().toCharArray();
-            int[] mark = new int[n];
-            for (int i = 0; i < n; ++i) {
-                if (s[i] != t[i]) {
-                    mark[i] = (s[i] == '0') ? 1 : 2;
-                }
-            }
-            int cnt1 = 0;
-            int cnt2 = 0;
-            for (int i = 0; i < n; ++i) {
-                if (mark[i] == 1) ++cnt1;
-                if (mark[i] == 2) ++cnt2;
-            }
-            if (cnt1 != cnt2) {
-                out.println(-1);
-            } else {
-                int n1 = 0;
-                int n2 = 0;
-                int res = 0;
-                for (int i = 0; i < n; ++i) {
-                    if (mark[i] == 1) {
-                        if (n2 > 0) {
-                            --n2;
-                            ++n1;
-                        } else {
-                            ++n1;
+            int tt = in.nextInt();
+            while (tt-- > 0) {
+                int n = in.nextInt();
+                int k = in.nextInt();
+                StringBuilder ans = new StringBuilder("-1");
+                for (int lastDigit = 0; lastDigit <= 9; ++lastDigit) {
+                    int cnt9Max = n / 9;
+                    if (lastDigit + k < 10) {
+                        cnt9Max = 0;
+                    }
+                    for (int cnt9 = 0; cnt9 <= cnt9Max; ++cnt9) {
+                        StringBuilder cur = new StringBuilder("");
+                        cur.append(lastDigit);
+                        for (int i = 0; i < cnt9; ++i) cur.append(9);
+                        int sum = 0;
+                        for (int i = 0; i <= k; ++i) {
+                            int j = lastDigit + i;
+                            if (j <= 9) {
+                                sum += j + cnt9 * 9;
+                            } else {
+                                sum += j % 10 + j / 10;
+                            }
                         }
-                    } else if (mark[i] == 2) {
-                        if (n1 > 0) {
-                            --n1;
-                            ++n2;
-                        } else {
-                            ++n2;
+                        int need = n - sum;
+                        if (need < 0 || need % (k + 1) != 0) continue;
+                        need /= (k + 1);
+                        int maxNum = 9;
+                        if (lastDigit + k >= 10) {
+                            maxNum = 8;
+                        }
+                        while (need > 0) {
+                            int d = Math.min(maxNum, need);
+                            maxNum = 9;
+                            need -= d;
+                            cur.append(d);
+                        }
+                        cur.reverse();
+                        updateAns(ans, cur);
+                    }
+                }
+                out.println(ans);
+            }
+        }
+
+        boolean updateAns(StringBuilder ans, StringBuilder cur) {
+            if (ans.charAt(0) == '-') {
+                ans.delete(0, ans.length());
+                ans.append(cur);
+                return true;
+            } else {
+                if (ans.length() > cur.length()) {
+                    ans.delete(0, ans.length());
+                    ans.append(cur);
+                    return true;
+                } else if (ans.length() == cur.length()) {
+                    for (int i = 0; i < ans.length(); ++i) {
+                        if (ans.charAt(i) > cur.charAt(i)) {
+                            ans.delete(0, ans.length());
+                            ans.append(cur);
+                            return true;
+                        } else if (ans.charAt(i) < cur.charAt(i)) {
+                            return false;
                         }
                     }
-                    res = Math.max(res, n1 + n2);
+                    return false;
+                } else {
+                    return false;
                 }
-                out.println(res);
             }
         }
 
@@ -90,16 +118,6 @@ public class Main {
                 }
             }
             return tokenizer.nextToken();
-        }
-
-        public String nextLine() {
-            String ret = "";
-            try {
-                ret = reader.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return ret;
         }
 
         public int nextInt() {

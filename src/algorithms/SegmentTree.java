@@ -1,7 +1,5 @@
 package algorithms;
 
-import java.util.Arrays;
-
 public class SegmentTree {
 
     int n;
@@ -96,12 +94,13 @@ public class SegmentTree {
     void pull_up(Node cur, Node left, Node right) {
         //int pair = Math.min(left.rightBracket, right.leftBracket);
         cur.val = Math.max(left.val, right.val);
+
         //cur.leftBracket = left.leftBracket + right.leftBracket - pair;
         //cur.rightBracket = right.rightBracket + left.rightBracket - pair;
     }
 
     void push_down(Node cur) {
-        if (cur.lazy_value > 0) {
+        if (cur.lazy_value != 0) {
             cur.lcld.lazy_value += cur.lazy_value;
             cur.lcld.val += cur.lazy_value;
             cur.rcld.lazy_value += cur.lazy_value;
@@ -170,6 +169,7 @@ public class SegmentTree {
         Node lcld;
         Node rcld;
         int val;
+        int highestRow;
         int leftBracket;
         int rightBracket;
         int lazy_value;
