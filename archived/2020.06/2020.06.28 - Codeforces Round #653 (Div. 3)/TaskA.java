@@ -1,6 +1,5 @@
 package current;
 
-
 import fastio.InputReader;
 
 import java.io.PrintWriter;
@@ -8,13 +7,14 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 
 
-public class TaskF {
+public class TaskA {
     public void solve(int testNumber, InputReader in, PrintWriter out) {
-        int T = in.nextInt();
-        while (T-- > 0) {
+        int tt = in.nextInt();
+        while (tt-- > 0) {
+            int x = in.nextInt();
+            int y = in.nextInt();
             int n = in.nextInt();
-            int[] a = in.nextIntArray(n);
-            int[] b = in.nextIntArray(n);
+            out.println((n - y) / x * x + y);
         }
     }
 }

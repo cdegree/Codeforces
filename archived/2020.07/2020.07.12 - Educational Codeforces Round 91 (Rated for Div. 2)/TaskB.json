@@ -1,31 +1,34 @@
 {
-  "name" : "F - Network Coverage",
+  "name" : "TaskB",
   "testType" : "SINGLE",
   "input" : {
-    "type" : "STANDARD"
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
   },
   "output" : {
-    "type" : "STANDARD"
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
   },
   "tests" : [ {
-    "input" : "5\n3\n2 3 4\n3 3 3\n3\n3 3 3\n2 3 4\n4\n2 3 4 5\n3 7 2 2\n4\n4 5 2 3\n2 3 2 7\n2\n1 1\n10 10\n",
-    "output" : "YES\nYES\nNO\nYES\nYES\n",
+    "input" : "3\nRRRR\nRSP\nS\n",
+    "output" : "PPPP\nRSP\nR",
     "index" : 0,
     "active" : true
   } ],
   "location" : "src/current",
-  "vmArgs" : "-Xmx256M",
+  "vmArgs" : "-Xmx256m -Xss64m",
   "mainClass" : "Main",
-  "taskClass" : "current.TaskF",
+  "taskClass" : "current.TaskB",
   "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
   "checkerParameters" : "",
   "testClasses" : [ ],
-  "date" : "2020.06.25",
-  "contestName" : "Educational Codeforces Round 90 (Rated for Div. 2)",
+  "date" : "2020.07.12",
+  "contestName" : "Educational Codeforces Round 91 (Rated for Div. 2)",
   "truncate" : true,
   "inputClass" : "fastio.InputReader",
   "outputClass" : "java.io.PrintWriter",
   "includeLocale" : false,
   "failOnOverflow" : false,
-  "interactive" : false
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
 }

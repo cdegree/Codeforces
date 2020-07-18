@@ -1,6 +1,5 @@
 package current;
 
-
 import fastio.InputReader;
 
 import java.io.PrintWriter;
@@ -13,8 +12,10 @@ public class TaskF {
         int T = in.nextInt();
         while (T-- > 0) {
             int n = in.nextInt();
-            int[] a = in.nextIntArray(n);
-            int[] b = in.nextIntArray(n);
+            for (int i = 0; i < n; ++i) {
+                out.print(1 + " ");
+            }
+            out.println();
         }
     }
 }

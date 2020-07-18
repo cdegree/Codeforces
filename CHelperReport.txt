@@ -1,2 +1,4 @@
-34 src/current/E - Sum of Digits.json
+22 src/current/TaskE.json
+2
 0
+1

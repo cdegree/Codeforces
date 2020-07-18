@@ -1,37 +1,69 @@
 package algorithms;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class MathUtil {
     public static int INF = 1 << 31;
     public static long LINF = 1L << 61;
 
-    public static void main(String[] args) {
-        for (int i = 1; i <= 100; ++i) {
-            //System.out.print(getEulerTotientFunction(i) + " ");
-            if (i % 10 == 0) {
-                //System.out.println();
+    public static void main(String[] args) throws IOException {
+//        for (int i = 1; i <= 100; ++i) {
+//            //System.out.print(getEulerTotientFunction(i) + " ");
+//            if (i % 10 == 0) {
+//                //System.out.println();
+//            }
+//        }
+//        int n = 20;
+//
+//        while (n != 0) {
+//            //System.out.println(n%-2);
+//            n /= -2;
+//        }
+//        int e = 1;
+//        for (int i = 0; i < 10; ++i) {
+//            //System.out.println(e);
+//            e *= -2;
+//        }
+//        Vector<Integer> res = new Vector<>();
+//        TreeSet<Integer> set = new TreeSet<>();
+//
+//        TreeSet<Integer> nset = set;
+//
+//        nset.add(23);
+//        System.out.println(set.size());
+        InputStreamReader in = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(in);
+        int m = 150;
+
+        String line = "";
+        while ((line = br.readLine())!=null) {
+            int[] cnt = new int[m];
+            for(char ch:line.toCharArray()){
+                cnt[ch]++;
             }
+            Vector<Integer> index = new Vector<>();
+            for (int i = 0; i < m; ++i) {
+                index.add(i);
+            }
+            index.sort((o1, o2) -> {
+                if (cnt[o1] != cnt[o2]) return cnt[o2] - cnt[o1];
+                return o1 - o2;
+            });
+            for (int i = 0; i < m; ++i) {
+                if (cnt[index.get(i)] > 0) {
+                    char ch = (char) index.get(i).intValue();
+                    //if (Character.isLetter(ch) || Character.isDigit(ch) || Character.isSpaceChar(ch))
+                        //System.out.println(ch+" "+cnt[index.get(i)]);
+                    System.out.print(ch);
+                }
+            }
+            System.out.println();
+            //2 12
+            //0 10
         }
-        int n = 20;
-
-        while (n != 0) {
-            //System.out.println(n%-2);
-            n /= -2;
-        }
-        int e = 1;
-        for (int i = 0; i < 10; ++i) {
-            //System.out.println(e);
-            e *= -2;
-        }
-        Vector<Integer> res = new Vector<>();
-        TreeSet<Integer> set = new TreeSet<>();
-
-        TreeSet<Integer> nset = set;
-
-        nset.add(23);
-        System.out.println(set.size());
-
     }
 
     public static Vector<Integer> getDivisors(int n) {
@@ -70,7 +102,7 @@ public class MathUtil {
 
     public static TreeMap<Integer, Integer> getPrimeDivisors(int n) {
         TreeMap<Integer, Integer> r = new TreeMap<>();
-        for (int i = 2; (long)i * i <= n; ++i) {
+        for (int i = 2; (long) i * i <= n; ++i) {
             if (n % i == 0) {
                 r.put(i, 0);
                 int cnt = 0;
