@@ -30,6 +30,35 @@ public class Graph {
         }
     }
 
+    /**
+     * if there is a circle, the return size is less than n.
+     *
+     * @param adj
+     * @param inDegree
+     * @param n
+     * @return the topological sorted nodes.
+     */
+    public static Vector<Integer> topologicalSort(LinkedList<Integer>[] adj, int[] inDegree, int n) {
+        Deque<Integer> dq = new ArrayDeque<>();
+        for (int i = 1; i <= n; ++i) {
+            if (inDegree[i] == 0) {
+                dq.addLast(i);
+            }
+        }
+        Vector<Integer> ret = new Vector<>();
+        while (!dq.isEmpty()) {
+            int cur = dq.removeFirst();
+            ret.add(cur);
+            for (int v : adj[cur]) {
+                --inDegree[v];
+                if (inDegree[v] == 0) {
+                    dq.addLast(v);
+                }
+            }
+        }
+        return ret;
+    }
+
     public boolean isContainsEdge(int u, int v) {
         for (Edge e : adj[u]) {
             if (e.v == v) {

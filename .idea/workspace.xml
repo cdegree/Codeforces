@@ -7,12 +7,9 @@
     <list default="true" id="0912ca14-bb8a-4fdb-8132-01d92138df5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHelperReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHelperReport.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archived/2020.06/2020.06.25 - Educational Codeforces Round 90 (Rated for Div. 2)/F - Network Coverage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archived/2020.06/2020.06.25 - Educational Codeforces Round 90 (Rated for Div. 2)/TaskF.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/MathUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/SegmentTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/SegmentTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/ArrayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/ArrayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/Graph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,11 +71,11 @@
     <session id="708047607">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="125" />
+          <entry key="project.closed" value="127" />
           <entry key="project.open.time.0" value="14" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="17" />
-          <entry key="project.open.time.11" value="30" />
+          <entry key="project.open.time.10" value="18" />
+          <entry key="project.open.time.11" value="31" />
           <entry key="project.open.time.119" value="1" />
           <entry key="project.open.time.12" value="46" />
           <entry key="project.open.time.13" value="18" />
@@ -91,11 +88,11 @@
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="15" />
-          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="164" />
+          <entry key="project.opened" value="167" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -103,7 +100,7 @@
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="2" />
           <entry key="iml" value="3" />
-          <entry key="java" value="660" />
+          <entry key="java" value="683" />
           <entry key="json" value="23" />
           <entry key="md" value="1" />
           <entry key="properties" value="4" />
@@ -114,7 +111,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="660" />
+          <entry key="JAVA" value="683" />
           <entry key="JSON" value="23" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="28" />
@@ -125,13 +122,13 @@
         <counts>
           <entry key="dummy" value="1" />
           <entry key="gitignore" value="35" />
-          <entry key="java" value="170273" />
+          <entry key="java" value="175781" />
           <entry key="properties" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="170273" />
+          <entry key="JAVA" value="175781" />
           <entry key="PLAIN_TEXT" value="36" />
           <entry key="Properties" value="4" />
         </counts>
@@ -141,10 +138,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/Utils.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Vector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="23">
+              <caret line="1280" selection-start-line="1280" selection-end-line="1280" />
+              <folding>
+                <element signature="e#5550#5551#0" expanded="true" />
+                <element signature="e#5590#5591#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/current/TaskD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -152,26 +189,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/current/TaskE.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="506">
+              <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/BinarySearchTree.java">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/ArrayUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/BinaryIndexedTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="184">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="e#4693#4694#0" expanded="true" />
+                <element signature="e#4734#4735#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,8 +255,6 @@
         <option value="$PROJECT_DIR$/src/algorithms/KMP.java" />
         <option value="$PROJECT_DIR$/src/algorithms/Trie.java" />
         <option value="$PROJECT_DIR$/src/acl/Sol.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/Graph.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/ArrayUtils.java" />
         <option value="$PROJECT_DIR$/src/current/TaskF2.java" />
         <option value="$PROJECT_DIR$/src/algorithms/Utils.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -233,18 +263,21 @@
         <option value="$PROJECT_DIR$/src/current/TaskG.java" />
         <option value="$PROJECT_DIR$/src/algorithms/MathUtil.java" />
         <option value="$PROJECT_DIR$/src/current/TaskF.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/Graph.java" />
         <option value="$PROJECT_DIR$/src/current/TaskA.java" />
         <option value="$PROJECT_DIR$/src/current/TaskB.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/ArrayUtils.java" />
         <option value="$PROJECT_DIR$/src/current/TaskC.java" />
         <option value="$PROJECT_DIR$/src/current/TaskD.java" />
         <option value="$PROJECT_DIR$/src/current/TaskE.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="5" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1070" />
+    <option name="y" value="80" />
     <option name="width" value="1375" />
-    <option name="height" value="1400" />
+    <option name="height" value="1334" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -274,6 +307,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,6 +329,12 @@
               <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
               <item name="Codeforces" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codeforces" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codeforces" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="current" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -302,7 +342,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,13 +442,11 @@
       <taskConf>src/current/TaskA.json</taskConf>
       <method v="2">
         <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
     <configuration name="TaskB" type="Task" factoryName="Task">
       <taskConf>src/current/TaskB.json</taskConf>
       <method v="2">
-        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
@@ -417,13 +454,11 @@
       <taskConf>src/current/TaskC.json</taskConf>
       <method v="2">
         <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
     <configuration name="TaskD" type="Task" factoryName="Task">
       <taskConf>src/current/TaskD.json</taskConf>
       <method v="2">
-        <option name="MakeProject" enabled="false" />
         <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
@@ -431,44 +466,19 @@
       <taskConf>src/current/TaskE.json</taskConf>
       <method v="2">
         <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TaskF" type="Task" factoryName="Task">
-      <taskConf>src/current/TaskF.json</taskConf>
-      <method v="2">
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TaskG" type="Task" factoryName="Task">
-      <taskConf>src/current/TaskG.json</taskConf>
-      <method v="2">
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="TaskH" type="Task" factoryName="Task">
-      <taskConf>src/current/TaskH.json</taskConf>
-      <method v="2">
-        <option name="MakeProject" enabled="false" />
-        <option name="MakeProject" enabled="false" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Task.TaskA" />
-      <item itemvalue="Task.TaskB" />
-      <item itemvalue="Task.TaskC" />
-      <item itemvalue="Task.TaskD" />
-      <item itemvalue="Task.TaskE" />
-      <item itemvalue="Task.TaskF" />
-      <item itemvalue="Task.TaskG" />
-      <item itemvalue="Task.TaskH" />
       <item itemvalue="Application.ArrayUtils" />
       <item itemvalue="Application.KMP" />
       <item itemvalue="Application.SegmentTree" />
       <item itemvalue="Application.Sol" />
       <item itemvalue="Application.MathUtil" />
+      <item itemvalue="Task.TaskA" />
+      <item itemvalue="Task.TaskB" />
+      <item itemvalue="Task.TaskC" />
+      <item itemvalue="Task.TaskD" />
+      <item itemvalue="Task.TaskE" />
     </list>
     <recent_temporary>
       <list>
@@ -494,9 +504,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16067864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16516966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -505,20 +516,20 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.497006" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7180639" weight="0.14536083" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.71656686" visible="true" weight="0.0010309279" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.65918165" weight="0.15360825" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.28193614" side_tool="true" visible="true" weight="0.14536083" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.28343314" side_tool="true" visible="true" weight="0.0010309279" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48752496" weight="0.32886598" />
       <window_info anchor="bottom" id="Log Viewer" order="11" />
       <window_info anchor="bottom" id="Anonymous Apex" order="12" />
       <window_info anchor="bottom" id="SOQL Query" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.5117467" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -571,13 +582,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/current/TaskF2.java" />
     <entry file="file://$PROJECT_DIR$/src/current/TaskF1.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3956">
-          <caret line="206" column="13" selection-start-line="206" selection-start-column="13" selection-end-line="206" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12926">
@@ -657,13 +661,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/current/F - Network Coverage.json" />
-    <entry file="file://$PROJECT_DIR$/src/algorithms/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/current/TaskA.json" />
     <entry file="file://$PROJECT_DIR$/src/current/TaskD.json" />
     <entry file="file://$PROJECT_DIR$/src/algorithms/MathUtil.java">
@@ -680,62 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskH.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/current/TaskD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/DisjointSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/ArrayUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="244" column="16" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -760,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4508">
-          <caret line="204" column="9" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/RmqSparseTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="711">
@@ -788,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -809,10 +740,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskH.java" />
+    <entry file="file://$PROJECT_DIR$/src/algorithms/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskF.java" />
+    <entry file="file://$PROJECT_DIR$/src/current/TaskG.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1280" selection-start-line="1280" selection-end-line="1280" />
+          <folding>
+            <element signature="e#5550#5551#0" expanded="true" />
+            <element signature="e#5590#5591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/ArrayUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#4693#4694#0" expanded="true" />
+            <element signature="e#4734#4735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/current/TaskD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/current/TaskE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="506">
+          <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
         </state>
       </provider>
     </entry>

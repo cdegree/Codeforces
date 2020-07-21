@@ -3,7 +3,12 @@ package algorithms;
 import java.util.*;
 
 public class ArrayUtils {
-
+    /***
+     *
+     * @param a
+     * @param start
+     * @param end
+     */
     public static void reverse(char[] a, int start, int end) {
         char temp;
         int from = start;
