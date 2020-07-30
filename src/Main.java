@@ -2,11 +2,11 @@ import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.Vector;
-import java.util.StringTokenizer;
+import java.io.PrintStream;
 import java.io.IOException;
-import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
 import java.io.InputStream;
 
 /**
@@ -27,28 +27,34 @@ public class Main {
     }
 
     static class TaskE {
+        long total;
+
         public void solve(int testNumber, InputReader in, PrintWriter out) {
             int T = in.nextInt();
             while (T-- > 0) {
-                int n = in.nextInt();
-                int m = n + n;
-                int[] p = in.nextIntArray(m);
-                Vector<Integer> cnt = new Vector<>();
-                for (int i = 0; i < m; ++i) {
-                    int j = i;
-                    while (j + 1 < m && p[j + 1] < p[i]) ++j;
-                    cnt.add(j - i + 1);
-                    i = j;
-                }
-                boolean[] available = new boolean[n + 1];
-                available[0] = true;
-                for (int i = 0; i < cnt.size(); ++i) {
-                    for (int j = n; j - cnt.get(i) >= 0; --j) {
-                        available[j] = available[j] | available[j - cnt.get(i)];
+                long m = in.nextLong();
+                long d = in.nextLong();
+                total = m * d;
+                long w = in.nextLong();
+                long min = Math.min(m, d);
+                long res = 0;
+                for (int i = 1; i <= min; ++i) {
+                    for (int j = i + 1; j <= min; ++j) {
+                        System.out.println(String.format("%d %d %% %d = %d", i, j, w, weekOfDay(i, j, d, w)));
+                        System.out.println(String.format("%d %d %% %d = %d", j, i, w, weekOfDay(j, i, d, w)));
+                        if (weekOfDay(i, j, d, w) == weekOfDay(j, i, d, w)) {
+                            ++res;
+                        }
                     }
                 }
-                out.println(available[n] ? "YES" : "NO");
+                out.println(res);
             }
+        }
+
+        long weekOfDay(long m, long d, long D, long w) {
+            long sum = D * (m - 1) + d;
+            if (sum > total) sum = total;
+            return sum % w;
         }
 
     }
@@ -77,11 +83,8 @@ public class Main {
             return Integer.parseInt(next());
         }
 
-        public int[] nextIntArray(int n) {
-            int[] a = new int[n];
-            for (int i = 0; i < n; i++)
-                a[i] = nextInt();
-            return a;
+        public long nextLong() {
+            return Long.parseLong(next());
         }
 
     }
