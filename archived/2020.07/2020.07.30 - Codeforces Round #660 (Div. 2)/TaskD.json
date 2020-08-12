@@ -1,0 +1,44 @@
+{
+  "name" : "TaskD",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3\n1 2 3\n2 3 -1\n",
+    "output" : "10\n1 2 3 \n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2\n-1 100\n2 -1\n",
+    "output" : "99\n2 1 \n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "10\n-10 -1 2 2 5 -2 -3 -4 2 -6\n-1 -1 2 2 -1 5 5 7 7 9\n",
+    "output" : "-9\n3 5 6 1 9 4 10 7 8 2\n",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskD",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.07.30",
+  "contestName" : "Codeforces Round #660 (Div. 2)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

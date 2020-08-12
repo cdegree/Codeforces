@@ -106,6 +106,15 @@ public class ArrayUtils {
         return b;
     }
 
+    /***
+     * e.x.
+     *
+     * int[] a = {9923, -2, -2, 5, -8, 23, -493, 6, -2, 78, 10000};
+     * a = shrink(a);
+     * then a = {8, 3, 3, 4, 2, 6, 1, 5, 3, 7, 9};
+     * @param a
+     * @return
+     */
     public static int[] shrink(int[] a) {
         int n = a.length;
         int[] ret = new int[n];
@@ -133,10 +142,16 @@ public class ArrayUtils {
         l.add(3);
         r.addAll(l);
 
+        int[] a = {9923, -2, -2, 5, -8, 23, -493, 6, -2, 78, 10000};
+        a = shrink(a);
+        for (int x : a) {
+            System.out.print(x + ",");
+        }
+
         l.removeLast();
         l.removeLast();
-        System.out.println(l);
-        System.out.println(r);
+//        System.out.println(l);
+//        System.out.println(r);
 
 
 //        int[] a = {9923, -2, -2, 5, -8, 23, -493, 6, -2, 78, 10000};
@@ -153,12 +168,20 @@ public class ArrayUtils {
 //        }
     }
 
+    public static int minElement(int[] a) {
+        return minElement(a, 0, a.length);
+    }
+
     public static int minElement(int[] a, int start, int end) {
         int ret = a[start];
         for (int i = start; i < end; ++i) {
             ret = Math.min(ret, a[i]);
         }
         return ret;
+    }
+
+    public static int maxElement(int[] a) {
+        return maxElement(a, 0, a.length);
     }
 
     public static int maxElement(int[] a, int start, int end) {
@@ -169,12 +192,20 @@ public class ArrayUtils {
         return ret;
     }
 
+    public static long minElement(long[] a) {
+        return minElement(a, 0, a.length);
+    }
+
     public static long minElement(long[] a, int start, int end) {
         long ret = a[start];
         for (int i = start; i < end; ++i) {
             ret = Math.min(ret, a[i]);
         }
         return ret;
+    }
+
+    public static long maxElement(long[] a) {
+        return maxElement(a, 0, a.length);
     }
 
     public static long maxElement(long[] a, int start, int end) {

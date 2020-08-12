@@ -2,11 +2,13 @@ import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.io.PrintStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.TreeSet;
+import java.util.Vector;
 import java.util.StringTokenizer;
 import java.io.BufferedReader;
+import java.util.Comparator;
 import java.io.InputStream;
 
 /**
@@ -21,40 +23,69 @@ public class Main {
         OutputStream outputStream = System.out;
         InputReader in = new InputReader(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        TaskE solver = new TaskE();
+        TaskA solver = new TaskA();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskE {
-        long total;
-
+    static class TaskA {
         public void solve(int testNumber, InputReader in, PrintWriter out) {
             int T = in.nextInt();
             while (T-- > 0) {
-                long m = in.nextLong();
-                long d = in.nextLong();
-                total = m * d;
-                long w = in.nextLong();
-                long min = Math.min(m, d);
-                long res = 0;
-                for (int i = 1; i <= min; ++i) {
-                    for (int j = i + 1; j <= min; ++j) {
-                        System.out.println(String.format("%d %d %% %d = %d", i, j, w, weekOfDay(i, j, d, w)));
-                        System.out.println(String.format("%d %d %% %d = %d", j, i, w, weekOfDay(j, i, d, w)));
-                        if (weekOfDay(i, j, d, w) == weekOfDay(j, i, d, w)) {
-                            ++res;
+                int n = in.nextInt();
+                char[] A = in.nextLine().toCharArray();
+                char[] B = in.nextLine().toCharArray();
+                TreeSet<String> set = new TreeSet<>(new Comparator<String>() {
+
+                    public int compare(String o1, String o2) {
+                        if (o1.charAt(1) != o2.charAt(1)) return o1.charAt(1) - o2.charAt(1);
+                        else {
+                            return o1.charAt(0) - o2.charAt(0);
                         }
                     }
+                });
+                boolean OK = true;
+                for (int i = 0; i < n; ++i) {
+                    if (A[i] > B[i]) {
+                        OK = false;
+                    } else if (A[i] < B[i]) {
+                        set.add(String.valueOf(A[i]) + String.valueOf(B[i]));
+                    }
                 }
-                out.println(res);
+                Vector<char[]> pairs = new Vector<>();
+                for (String s : set) {
+                    pairs.add(new char[]{s.charAt(0), s.charAt(1)});
+                }
+                boolean[] reachable = new boolean[22];
+                int cnt = 0;
+                for (int i = 0; i < pairs.size(); ++i) {
+                    char[] s = pairs.get(i);
+                    if (s[0] < s[1]) {
+                        for (int j = i + 1; j < pairs.size(); ++j) {
+                            char[] t = pairs.get(j);
+                            if (t[0] == s[0] && s[1] <= t[1]) {
+                                t[0] = s[1];
+                            }
+                        }
+                        s[0] = s[1];
+                        ++cnt;
+                    }
+//                for (int k = 0; k < pairs.size(); ++k) {
+//                    System.out.println(String.format("%c %c", pairs.get(k)[0], pairs.get(k)[1]));
+//                }
+//                System.out.println();
+                }
+                for (int i = 0; i < 22; ++i) {
+                    if (reachable[i]) {
+                        ++cnt;
+                    }
+                }
+                if (!OK) {
+                    out.println(-1);
+                } else {
+                    out.println(cnt);
+                }
             }
-        }
-
-        long weekOfDay(long m, long d, long D, long w) {
-            long sum = D * (m - 1) + d;
-            if (sum > total) sum = total;
-            return sum % w;
         }
 
     }
@@ -79,12 +110,18 @@ public class Main {
             return tokenizer.nextToken();
         }
 
-        public int nextInt() {
-            return Integer.parseInt(next());
+        public String nextLine() {
+            String ret = "";
+            try {
+                ret = reader.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return ret;
         }
 
-        public long nextLong() {
-            return Long.parseLong(next());
+        public int nextInt() {
+            return Integer.parseInt(next());
         }
 
     }
