@@ -1,0 +1,64 @@
+{
+  "name" : "TaskA",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "5\n3\naab\nbcc\n4\ncabc\nabcb\n3\nabc\ntsr\n4\naabd\ncccd\n5\nabcbd\nbcdda\n",
+    "output" : "2\n-1\n3\n2\n-1\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1\n6\naaaccc\ncdefgh",
+    "output" : "",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1\n5\naaaab\nbcccc",
+    "output" : "2",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "1\n5\nabcdea\nbcdeff",
+    "output" : "5",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "1\n6\naaabbb\nbbbcde",
+    "output" : "4",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "1\n4\naaba\nceeb",
+    "output" : "3",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "1\n6\naaabcd\nbcdeee",
+    "output" : "4",
+    "index" : 6,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskA",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.08.11",
+  "contestName" : "Codeforces Round #664 (Div. 1)",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

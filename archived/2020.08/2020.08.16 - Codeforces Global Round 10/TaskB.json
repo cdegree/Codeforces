@@ -1,0 +1,34 @@
+{
+  "name" : "TaskB",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3\n2 1\n-199 192\n5 19\n5 -1 4 2 0\n1 2\n69\n",
+    "output" : "391 0\n0 6 1 3 5\n0\n",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.08.16",
+  "contestName" : "Codeforces Global Round 10",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

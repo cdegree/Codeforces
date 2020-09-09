@@ -22,6 +22,12 @@ public class ArrayUtils {
         }
     }
 
+    void swap(Integer a, Integer b){
+        int t = a;
+        a = b;
+        b = t;
+    }
+
     public static long sum(long[] a) {
         long ret = 0;
         for (int i = 0; i < a.length; ++i) {
@@ -133,6 +139,11 @@ public class ArrayUtils {
         }
         return ret;
     }
+    int get(int x){
+        int b;
+        return x;
+    }
+
 
     public static void main(String[] args) {
         LinkedList<Integer> l = new LinkedList<>();
@@ -140,6 +151,10 @@ public class ArrayUtils {
         l.add(1);
         l.add(2);
         l.add(3);
+        int c;
+        {
+            int d;
+        }
         r.addAll(l);
 
         int[] a = {9923, -2, -2, 5, -8, 23, -493, 6, -2, 78, 10000};

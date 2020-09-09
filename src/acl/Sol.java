@@ -17,6 +17,9 @@ public class Sol {
     public Sol() {
         B b = new B();
     }
+    int[] getArrays(){
+        return new int[]{1,2,3};
+    }
 
     public static void main(String[] args) {
         // The comment below is magic..
@@ -25,6 +28,7 @@ public class Sol {
         String s = "09-03-2002";
         boolean ok = s.matches("\\d+\\D\\d+\\D\\d+");
         System.out.println(ok);
+        int[] a;
 
 
         TreeMap<Integer, Integer> set = new TreeMap<>();
@@ -99,7 +103,10 @@ public class Sol {
         }
     }
 
-    class A {
+    static class A {
+        static {
+            System.out.println("A static block called");
+        }
         {
             System.out.println("A block called");
         }

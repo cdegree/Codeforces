@@ -5,7 +5,7 @@ public class SegmentTree {
     int n;
     Node[] nodes = null;
     Node[] rNodes = null;
-    char[] a = null;
+    int[] a = null;
     int[] rev = null;
 
     public SegmentTree(int n) {
@@ -72,12 +72,12 @@ public class SegmentTree {
     }
 
 
-    public void build(char[] a) {
+    public void build(int[] a) {
         this.a = a;
         build(1, 1, n, a);
     }
 
-    public void build(int root, int nodeLeft, int nodeRight, char[] a) {
+    public void build(int root, int nodeLeft, int nodeRight, int[] a) {
         nodes[root].left = nodeLeft;
         nodes[root].right = nodeRight;
         rNodes[root].left = nodeLeft;
@@ -85,20 +85,21 @@ public class SegmentTree {
         nodes[root].lazy_value = rNodes[root].lazy_value = 0;
 //      System.out.println(String.format("node[%d] [%d,%d]", cur, left[cur], right[cur]));
         if (nodeLeft == nodeRight) {
+            nodes[root].val = a[nodeLeft];
             //System.out.println(" L:"+cur.left);
-            if (a[nodeLeft - 1] == '<') {
-                rNodes[root].leftRight = nodes[root].leftLeft = 1;
-                rNodes[root].leftLeft = nodes[root].leftRight = 0;
-                rNodes[root].rightRight = nodes[root].rightLeft = 1;
-                rNodes[root].rightLeft = nodes[root].rightRight = 0;
-                rNodes[root].maxValue = nodes[root].maxValue = 1;
-            } else {
-                rNodes[root].leftRight = nodes[root].leftLeft = 0;
-                rNodes[root].leftLeft = nodes[root].leftRight = 1;
-                rNodes[root].rightRight = nodes[root].rightLeft = 0;
-                rNodes[root].rightLeft = nodes[root].rightRight = 1;
-                rNodes[root].maxValue = nodes[root].maxValue = 1;
-            }
+//            if (a[nodeLeft - 1] == '<') {
+//                rNodes[root].leftRight = nodes[root].leftLeft = 1;
+//                rNodes[root].leftLeft = nodes[root].leftRight = 0;
+//                rNodes[root].rightRight = nodes[root].rightLeft = 1;
+//                rNodes[root].rightLeft = nodes[root].rightRight = 0;
+//                rNodes[root].maxValue = nodes[root].maxValue = 1;
+//            } else {
+//                rNodes[root].leftRight = nodes[root].leftLeft = 0;
+//                rNodes[root].leftLeft = nodes[root].leftRight = 1;
+//                rNodes[root].rightRight = nodes[root].rightLeft = 0;
+//                rNodes[root].rightLeft = nodes[root].rightRight = 1;
+//                rNodes[root].maxValue = nodes[root].maxValue = 1;
+//            }
 //          System.out.println(String.format("node[%d] [%d,%d] sum =%d", cur, left[cur], right[cur], sum[cur]));
         } else {
             int leftChild = root * 2;
@@ -163,12 +164,10 @@ public class SegmentTree {
     }
 
     void push_down(int root) {
-        if (rev[root] == 1) {
-            if (nodes[root].left < nodes[root].right) {
-                flip(root * 2);
-                flip(root * 2 + 1);
-            }
-            rev[root] = 0;
+        if (nodes[root].lazy_value > 0) {
+            op(root * 2, nodes[root].lazy_value);
+            op(root * 2 + 1, nodes[root].lazy_value);
+            nodes[root].lazy_value = 0;
         }
     }
 
@@ -177,6 +176,11 @@ public class SegmentTree {
         Node tmp = nodes[root];
         nodes[root] = rNodes[root];
         rNodes[root] = tmp;
+    }
+
+    void op(int root, int value) {
+        nodes[root].val += value;
+        nodes[root].lazy_value += value;
     }
 
     void pf(String label, Node cur) {
@@ -193,7 +197,8 @@ public class SegmentTree {
         //System.out.println(String.format("enter node[%d] lazy = %d [%d,%d] leftLeft = %d leftRight = %d rightLeft = %d rightRight = %d %s", root, nodes[root].lazy_value, nodeLeft, nodeRight, nodes[root].leftLeft, nodes[root].leftRight, nodes[root].rightLeft, nodes[root].rightRight, subString(a, nodeLeft, nodeRight + 1)));
 
         if (queryLeft <= nodeLeft && nodeRight <= queryRight) {
-            flip(root);
+            //flip(root);
+            op(root, value);
             //System.out.println(String.format("exit node[%d] lazy = %d [%d,%d] leftLeft = %d leftRight = %d rightLeft = %d rightRight = %d %s", root, nodes[root].lazy_value, nodeLeft, nodeRight, nodes[root].leftLeft, nodes[root].leftRight, nodes[root].rightLeft, nodes[root].rightRight, subString(a, nodeLeft, nodeRight + 1)));
         } else {
             push_down(root);
@@ -216,7 +221,7 @@ public class SegmentTree {
 
     public int query(int queryLeft, int queryRight) {
         Node qNode = query(1, 1, n, queryLeft, queryRight);
-        return qNode.maxValue;
+        return qNode.val;
     }
 
     public Node query(int root, int nodeLeft, int nodeRight, int queryLeft, int queryRight) {
