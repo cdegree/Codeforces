@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -51,7 +52,6 @@ public class Solve {
             cache = new TreeMap<>(Comparator.comparingInt(o -> o));
             rank = new LinkList();
         }
-
         public int get(int key) {
             if (cache.containsKey(key)) {
                 Element element = cache.get(key);
@@ -78,6 +78,7 @@ public class Solve {
                 //System.out.println("leastRecentUsedItem = " + leastRecentUsedItem.key);
                 rank.remove(leastRecentUsedItem);
                 cache.remove(leastRecentUsedItem.key);
+                leastRecentUsedItem = null;
                 Element element = new Element(key, value);
                 rank.addFirst(element);
                 cache.put(key, element);

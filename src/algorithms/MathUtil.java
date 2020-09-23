@@ -66,8 +66,8 @@ public class MathUtil {
         }
     }
 
-    public static Vector<Integer> getDivisors(int n) {
-        Vector<Integer> r = new Vector<>();
+    public static ArrayList<Integer> getDivisors(int n) {
+        ArrayList<Integer> r = new ArrayList<>();
         for (int i = 1; i * i <= n; ++i) {
             if (n % i == 0) {
                 r.add(i);
@@ -87,8 +87,8 @@ public class MathUtil {
      * @param n
      * @return all unique divisors of n
      */
-    public static Vector<Long> getDivisors(long n) {
-        Vector<Long> r = new Vector<>();
+    public static ArrayList<Long> getDivisors(long n) {
+        ArrayList<Long> r = new ArrayList<>();
         for (Long i = 1L; i * i <= n; ++i) {
             if (n % i == 0) {
                 r.add(i);

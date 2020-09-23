@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BinaryIndexedTree {
     public int count;
     int n;
-    long[] bit;
+    public long[] bit;
 
     public BinaryIndexedTree(int n) {
         this.n = n;
@@ -43,7 +43,7 @@ public class BinaryIndexedTree {
     }
 
     /* Returns cumulative sum of all elements of
-       fenwick tree/BIT from start upto and
+       fenwick tree/BIT from start up to and
        including element at index 'i'. */
     public long sum(int i) {
         long ans = 0;
@@ -76,14 +76,14 @@ public class BinaryIndexedTree {
         return l;
     }
 
-    // Insert x into BIT. We masically increment
+    // Insert x into BIT. We basically increment
     // rank of all elements greater than x.
     public void insertElement(int x) {
         update(x, 1);
         ++count;
     }
 
-    // Delete x from BIT. We masically decreases
+    // Delete x from BIT. We basically decreases
     // rank of all elements greater than x.
     public void deleteElement(int x) {
         update(x, -1);
