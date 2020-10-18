@@ -5,11 +5,9 @@ import java.io.PrintWriter;
 import java.io.PrintStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.StringTokenizer;
 import java.io.BufferedReader;
-import java.util.LinkedList;
 import java.io.InputStream;
 
 /**
@@ -31,78 +29,34 @@ public class Main {
 
     static class TaskE {
         public void solve(int testNumber, InputReader in, PrintWriter out) {
-            int T = in.nextInt();
-            while (T-- > 0) {
-                int n = in.nextInt();
-                TreeMap<Integer, Integer> primeDivisors = MathUtil.getPrimeDivisors(n);
-                ArrayList<Integer> divisors = MathUtil.getDivisors(n);
-                Utils.pf("divisors = %d primeD = %d", divisors.size(), primeDivisors.size());
-                LinkedList<Integer>[] adj = new LinkedList[divisors.size()];
-                for (int i = 0; i < adj.length; ++i) adj[i] = new LinkedList<>();
-                for (int prime : primeDivisors.keySet()) {
-                    boolean[] con = new boolean[divisors.size()];
-                    for (int i = 0; i < divisors.size(); ++i) {
-                        if (divisors.get(i) % prime == 0) {
-                            con[i] = true;
-                        }
-                    }
-                    for (int i = 0; i < divisors.size(); ++i) {
-                        if (con[i]) {
-                            for (int j = i + 1; j < divisors.size(); ++j) {
-                                if (con[j]) {
-                                    adj[i].addLast(j);
-                                    adj[j].addLast(i);
-                                }
-                            }
-                        }
-                    }
-                }
+            int n = in.nextInt();
+            int k = in.nextInt();
+            long[] a = in.nextLongArray(n);
 
-
+            TreeSet<Pair<Long, Integer>> pairs = new TreeSet<>();
+            long[] cuts = new long[n + 1];
+            long cost = 0;
+            for (int i = 0; i < n; ++i) {
+                cost += a[i] * a[i];
+                cuts[i] = 1;
+                pairs.add(new Pair<>(bestCutCost(a[i], cuts[i] + 1) - bestCutCost(a[i], cuts[i]), i));
             }
+            for (int i = 0; i < k - n; ++i) {
+                Pair<Long, Integer> pair = pairs.pollFirst();
+                cost += pair.x;
+                int id = pair.y;
+                cuts[id]++;
+                pairs.add(new Pair<>(bestCutCost(a[id], cuts[id] + 1) - bestCutCost(a[id], cuts[id]), id));
+            }
+            out.println(cost);
         }
 
-    }
-
-    static class MathUtil {
-        public static ArrayList<Integer> getDivisors(int n) {
-            ArrayList<Integer> r = new ArrayList<>();
-            for (int i = 1; i * i <= n; ++i) {
-                if (n % i == 0) {
-                    r.add(i);
-                    if (n / i != i) {
-                        r.add((n / i));
-                    }
-                }
-            }
-
-            return r;
-        }
-
-        public static TreeMap<Integer, Integer> getPrimeDivisors(int n) {
-            TreeMap<Integer, Integer> r = new TreeMap<>();
-            for (int i = 2; (long) i * i <= n; ++i) {
-                if (n % i == 0) {
-                    r.put(i, 0);
-                    int cnt = 0;
-                    while (n % i == 0) {
-                        ++cnt;
-                        n /= i;
-                    }
-                    r.put(i, cnt);
-                }
-            }
-            if (n > 1) {
-                r.put(n, 1);
-            }
-            return r;
-        }
-
-    }
-
-    static class Utils {
-        public static void pf(String format, Object... obj) {
-            System.out.println(String.format(format, obj));
+        long bestCutCost(long x, long cut) {
+            long perPile = x / cut;
+            long r = x % cut;
+            long cntMore = r;
+            long cntLess = cut - cntMore;
+            return perPile * perPile * cntLess + (perPile + 1) * (perPile + 1) * cntMore;
         }
 
     }
@@ -129,6 +83,53 @@ public class Main {
 
         public int nextInt() {
             return Integer.parseInt(next());
+        }
+
+        public long nextLong() {
+            return Long.parseLong(next());
+        }
+
+        public long[] nextLongArray(int n) {
+            long[] a = new long[n];
+            for (int i = 0; i < n; i++)
+                a[i] = nextLong();
+            return a;
+        }
+
+    }
+
+    static class Pair<K, V> implements Comparable<Pair> {
+        public K x;
+        public V y;
+
+        public Pair(K x, V y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public Pair() {
+
+        }
+
+        public int compareTo(Pair o) {
+            if (compareNumber(x, o.x) != 0) {
+                return compareNumber(x, o.x);
+            } else {
+                return compareNumber(y, o.y);
+            }
+        }
+
+        private int compareNumber(Object o1, Object o2) {
+            if (o1 instanceof Integer && o2 instanceof Integer) {
+                return ((Integer) o1).compareTo((Integer) o2);
+            } else if (o1 instanceof Long && o2 instanceof Long) {
+                return ((Long) o1).compareTo((Long) o2);
+            } else if (o1 instanceof Double && o2 instanceof Double) {
+                return ((Double) o1).compareTo((Double) o2);
+            } else {
+                System.out.println("Unsupported Type");
+                return 0;
+            }
         }
 
     }

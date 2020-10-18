@@ -12,7 +12,7 @@
 out/
 ms/
 src/acl/
-src/current/
+src/current/*
 lib/
 
 # Package Files #

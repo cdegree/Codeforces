@@ -1,0 +1,89 @@
+{
+  "name" : "TaskB",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "8\n5 2\nWLWLL\n6 5\nLLLWWL\n7 1\nLWLWLWL\n15 5\nWWWLLLWWWLLLWWW\n40 7\nLLWLWLWWWLWLLWLWWWLWLLWLLWLLLLWLLWWWLWWL\n1 0\nL\n1 1\nL\n6 1\nWLLWLW\n",
+    "output" : "7\n11\n6\n26\n46\n0\n1\n6\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2\n10 0\nLLLLLLLLLL\n10 0\nWWLLLLLLLL",
+    "output" : "0\n3",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "1\n5 5\nLLLLL",
+    "output" : "9",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "1\n5 5\nWLLLL",
+    "output" : "9",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "1\n5 0\nLLWLL",
+    "output" : "1",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "1\n1 1\nW",
+    "output" : "1",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "1\n5 2\nWWWWW",
+    "output" : "9",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "1\n5 2\nLLLLL",
+    "output" : "3",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "5\n5 2\nWLLLW\n5 2\nWWWLW\n5 2\nLLLLW\n5 2\nWLLLL\n5 2\nLWLWL",
+    "output" : "6\n9\n5\n5\n7",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "5\n14 1\nLWLLWLLLWLLLLW\n14 2\nLWLLWLLLWLLLLW\n14 3\nLWLLWLLLWLLLLW\n14 4\nLWLLWLLLWLLLLW\n14 5\nLWLLWLLLWLLLLW",
+    "output" : "",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "1\n3 4\nLWL",
+    "output" : "5",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "1\n6 0\nWWWWLL",
+    "output" : "7",
+    "index" : 11,
+    "active" : true
+  } ],
+  "location" : "src/current",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "current.TaskB",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.10.10",
+  "contestName" : "Codeforces Global Round 11",
+  "truncate" : true,
+  "inputClass" : "fastio.InputReader",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}
