@@ -38,14 +38,14 @@ public class Graph {
      * @param n
      * @return the topological sorted nodes.
      */
-    public static Vector<Integer> topologicalSort(LinkedList<Integer>[] adj, int[] inDegree, int n) {
+    public static ArrayList<Integer> topologicalSort(LinkedList<Integer>[] adj, int[] inDegree, int n) {
         Deque<Integer> dq = new ArrayDeque<>();
         for (int i = 1; i <= n; ++i) {
             if (inDegree[i] == 0) {
                 dq.addLast(i);
             }
         }
-        Vector<Integer> ret = new Vector<>();
+        ArrayList<Integer> ret = new ArrayList<>();
         while (!dq.isEmpty()) {
             int cur = dq.removeFirst();
             ret.add(cur);
