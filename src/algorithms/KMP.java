@@ -3,9 +3,9 @@ package algorithms;
 public class KMP {
     static public int[] getP(char[] s) {
         int n = s.length;
-        int[] p = new int[n + 1];
+        int[] p = new int[n];
+        int j = 0;
         for (int i = 1; i < n; ++i) {
-            int j = p[i - 1];
             while (j > 0 && s[i] != s[j]) {
                 j = p[j - 1];
             }
@@ -27,5 +27,7 @@ public class KMP {
         for (int i = 0; i < p.length; ++i) {
             System.out.print(p[i] + " ");
         }
+
+
     }
 }

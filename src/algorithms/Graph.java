@@ -38,25 +38,36 @@ public class Graph {
      * @param n
      * @return the topological sorted nodes.
      */
-    public static ArrayList<Integer> topologicalSort(LinkedList<Integer>[] adj, int[] inDegree, int n) {
+    public static int topologicalSort(TreeSet<Integer>[] adj, int[] inDegree, int n, ArrayList<Integer> ret) {
         Deque<Integer> dq = new ArrayDeque<>();
-        for (int i = 1; i <= n; ++i) {
+        int[] dis = new int[n];
+        for (int i = 0; i < n; ++i) {
             if (inDegree[i] == 0) {
                 dq.addLast(i);
+                dis[i] = 1;
             }
         }
-        ArrayList<Integer> ret = new ArrayList<>();
+
         while (!dq.isEmpty()) {
             int cur = dq.removeFirst();
             ret.add(cur);
             for (int v : adj[cur]) {
                 --inDegree[v];
+                if (cur < v) {
+                    dis[v] = Math.max(dis[v], dis[cur]);
+                } else {
+                    dis[v] = Math.max(dis[v], dis[cur] + 1);
+                }
                 if (inDegree[v] == 0) {
                     dq.addLast(v);
                 }
             }
         }
-        return ret;
+        if (ret.size() < n) {
+            return -1;
+        } else {
+            return ArrayUtils.maxElement(dis);
+        }
     }
 
     public boolean isContainsEdge(int u, int v) {
